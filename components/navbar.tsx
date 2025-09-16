@@ -1,92 +1,99 @@
 "use client";
 
+import { Button } from "@heroui/button";
+import { Image } from "@heroui/image";
+import { Link } from "@heroui/link";
 import {
   Navbar as HeroUINavbar,
-  NavbarContent,
-  NavbarMenu,
-  NavbarMenuToggle,
   NavbarBrand,
+  NavbarContent,
   NavbarItem,
+  NavbarMenu,
   NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@heroui/navbar";
-import { Button } from "@heroui/button";
-import { Kbd } from "@heroui/kbd";
-import { Link } from "@heroui/link";
-import { Input } from "@heroui/input";
-import { link as linkStyles } from "@heroui/theme";
-import NextLink from "next/link";
-import clsx from "clsx";
 
-import { siteConfig } from "@/config/site";
-import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-  Logo,
-} from "@/components/icons";
 import { useState } from "react";
-
-export const AcmeLogo = () => {
-  return (
-    <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
-      <path
-        clipRule="evenodd"
-        d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
-        fill="currentColor"
-        fillRule="evenodd"
-      />
-    </svg>
-  );
-};
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const menuItems = ["Home", "Product", "About", "Contact Us"];
   return (
-    <HeroUINavbar onMenuOpenChange={setIsMenuOpen}>
+    <HeroUINavbar
+      onMenuOpenChange={setIsMenuOpen}
+      className="bg-black-500 h-[101.07975769042969px]"
+    >
       <NavbarContent>
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden"
-        />
         <NavbarBrand>
-          <AcmeLogo />
-          <p className="font-bold text-inherit">ACME</p>
+          <Image
+            alt="Qreative Tech Logo"
+            src="/qreativelogo.png"
+            className="w-[130.59px] h-[40.86px] md:w-[208px] md:h-auto"
+          />
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
+          <Link
+            color="foreground"
+            href="#"
+            className="text-sm md:text-[17.1px]"
+          >
+            Home
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
-          <Link aria-current="page" href="#">
-            Customers
+          <Link
+            color="foreground"
+            aria-current="page"
+            href="#"
+            className="text-sm md:text-[17.1px]"
+          >
+            Product
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
+          <Link
+            color="foreground"
+            href="#"
+            className="text-sm md:text-[17.1px]"
+          >
+            About
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link
+            color="foreground"
+            href="#"
+            className="text-sm md:text-[17.1px]"
+          >
+            Contact Us
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
+      <NavbarContent justify="end" className="hidden sm:flex">
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
+          <Button
+            as={Link}
+            href="#"
+            variant="solid"
+            color="primary"
+            radius="full"
+            className="font-bold py-2 px-5 md:py-3  md:px-6 w-[157px] md:w-[217px] h-[39px] md:h-[47px] text-sm md:text-[18px]"
+          >
+            Mau Ngobrol Dulu ?
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarMenu>
+      <NavbarContent className="sm:hidden" justify="end">
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+      </NavbarContent>
+      <NavbarMenu className="bg-black-500">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
             <Link

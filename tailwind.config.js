@@ -16,7 +16,7 @@ const config = {
         background: {
           DEFAULT: "#333333",
         },
-        primary: {
+        brand: {
           50: "#b3b3b3",
           100: "#7a7a7a",
           200: "#696969",
@@ -28,7 +28,7 @@ const config = {
           800: "#0d0d0d",
           900: "#080808",
         },
-        secondary: {
+        accent: {
           50: "#dcdbdb",
           100: "#b5b5b5",
           200: "#9f9e9e",
@@ -40,7 +40,7 @@ const config = {
           800: "#363535",
           900: "#363535",
         },
-        tertiary: {
+        warning: {
           50: "#ffe8bd",
           100: "#ffd07a",
           200: "#ffcd70",
@@ -52,7 +52,7 @@ const config = {
           800: "#bd7a00",
           900: "#805300",
         },
-        neutral: {
+        neutralCustom: {
           50: "#ffffff",
           100: "#ebebeb",
           200: "#dedede",
@@ -73,6 +73,9 @@ const config = {
         red: {
           500: "#f44336",
         },
+        black: {
+          500: "#1E1E1E",
+        },
       },
       fontFamily: {
         sans: ["var(--font-sans)"],
@@ -81,7 +84,19 @@ const config = {
     },
   },
   darkMode: "class",
-  plugins: [heroui()],
+  plugins: [
+    heroui({
+      themes: {
+        light: {
+          colors: {
+            primary: {
+              DEFAULT: "#333333",
+            },
+          },
+        },
+      },
+    }),
+  ],
 };
 
 module.exports = config;
