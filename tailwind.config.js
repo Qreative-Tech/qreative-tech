@@ -26,7 +26,7 @@ const config = {
           600: "#1a1a1a",
           700: "#121212",
           800: "#0d0d0d",
-          900: "#080808",
+          900: "#232324",
         },
         accent: {
           50: "#dcdbdb",
@@ -91,6 +91,9 @@ const config = {
           colors: {
             primary: {
               DEFAULT: "#333333",
+            },
+            secondary: {
+              DEFAULT: "#292929",
             },
           },
         },

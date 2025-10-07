@@ -7,6 +7,7 @@ import { Providers } from "./providers";
 import { Navbar } from "@/components/navbar";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
+import { Image } from "@heroui/image";
 
 export const metadata: Metadata = {
   title: {
@@ -36,8 +37,8 @@ export default function RootLayout({
       <head />
       <body
         className={clsx(
-          "min-h-screen text-foreground bg-background font-sans antialiased",
-          fontSans.variable
+          "text-foreground bg-background min-h-screen font-sans antialiased",
+          fontSans.variable,
         )}
       >
         <Providers
@@ -47,13 +48,12 @@ export default function RootLayout({
             forcedTheme: "light",
           }}
         >
-          <div className="relative flex flex-col h-screen">
+          <div className="relative flex min-h-screen flex-col">
             <Navbar />
-            <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
-              {children}
-            </main>
-            {/* <footer className="w-full flex items-center justify-center py-3">
-              <Link
+            <main className="mt-14 flex-grow md:pt-16">{children}</main>
+
+            <footer className="bg-brand-900 flex w-full flex-row items-center justify-between px-[40px] py-[20px] lg:px-[90px]">
+              {/* <Link
                 isExternal
                 className="flex items-center gap-1 text-current"
                 href="https://heroui.com?utm_source=next-app-template"
@@ -61,8 +61,18 @@ export default function RootLayout({
               >
                 <span className="text-default-600">Powered by</span>
                 <p className="text-primary">HeroUI</p>
-              </Link>
-            </footer> */}
+              </Link> */}
+
+              <p className="text-neutral-custom-600 text-[11px] font-bold lg:text-[18px]">
+                Copyright © 2025 Qreative Tech
+              </p>
+              <Image
+                src="/qreativeLogoV2.svg"
+                alt="Qreative Logo"
+                width={214}
+                height={52}
+              />
+            </footer>
           </div>
         </Providers>
       </body>

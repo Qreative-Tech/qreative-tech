@@ -22,8 +22,10 @@ export const Navbar = () => {
   return (
     <HeroUINavbar
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-black-500 h-[101.07975769042969px]"
+      className="bg-black-500 h-[101.07975769042969px] md:px-5"
+      maxWidth="full"
     >
+      {/* Logo */}
       <NavbarContent>
         <NavbarBrand>
           <Image
@@ -33,9 +35,9 @@ export const Navbar = () => {
           />
         </NavbarBrand>
       </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
+      {/* Links */}
+      <NavbarContent className="hidden sm:flex gap-9" justify="center">
+        <NavbarItem isActive>
           <Link
             color="foreground"
             href="#"
@@ -44,7 +46,7 @@ export const Navbar = () => {
             Home
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
+        <NavbarItem>
           <Link
             color="foreground"
             aria-current="page"
@@ -73,7 +75,8 @@ export const Navbar = () => {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="end" className="hidden sm:flex">
+      {/* CTA */}
+      <NavbarContent justify="end" className="hidden w-full sm:flex">
         <NavbarItem>
           <Button
             as={Link}
@@ -87,12 +90,14 @@ export const Navbar = () => {
           </Button>
         </NavbarItem>
       </NavbarContent>
+      {/* Mobile */}
       <NavbarContent className="sm:hidden" justify="end">
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
       </NavbarContent>
+      {/* Mobile Menu */}
       <NavbarMenu className="bg-black-500">
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
