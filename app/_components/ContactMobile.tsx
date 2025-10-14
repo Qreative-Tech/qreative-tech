@@ -8,8 +8,61 @@ import { Button } from "@heroui/button";
 import { Card } from "@heroui/card";
 import { Input, Textarea } from "@heroui/input";
 import { Link } from "@heroui/link";
+import { useState } from "react";
 
 export const ContactMobile = () => {
+  const [nama, setNama] = useState("");
+  const [email, setEmail] = useState("");
+  const [pesan, setPesan] = useState("");
+  const [errors, setErrors] = useState({
+    nama: "",
+    email: "",
+    pesan: "",
+  });
+
+  const validate = () => {
+    let isValid = true;
+    const newErrors = { nama: "", email: "", pesan: "" };
+
+    if (!nama.trim()) {
+      newErrors.nama = "Nama tidak boleh kosong";
+      isValid = false;
+    }
+
+    if (!email.trim()) {
+      newErrors.email = "Email tidak boleh kosong";
+      isValid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      newErrors.email = "Format email tidak valid";
+      isValid = false;
+    }
+
+    if (!pesan.trim()) {
+      newErrors.pesan = "Pesan tidak boleh kosong";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
+
+  const handleSendWhatsApp = () => {
+    if (!validate()) return;
+
+    const nomor = NOMORWA;
+    const text = `Halo Qreative Tech!
+Saya ingin menghubungi melalui form di website.
+
+Nama: ${nama || "-"}
+Email: ${email || "-"}
+Pesan: ${pesan || "-"}
+
+Terima kasih`;
+
+    const url = `https://wa.me/${nomor}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank");
+  };
+
   return (
     <div className="bg-brand-900 relative flex h-[650px] w-full items-center justify-center rounded-tl-[28px] px-[40px]">
       <Card
@@ -20,6 +73,8 @@ export const ContactMobile = () => {
           <div className="flex flex-col gap-1">
             <label className="text-sm text-white/80">Nama</label>
             <Input
+              value={nama}
+              onChange={(e) => setNama(e.target.value)}
               placeholder="John Carter"
               variant="flat"
               radius="sm"
@@ -29,11 +84,16 @@ export const ContactMobile = () => {
                 input: "text-white placeholder:text-white/40",
               }}
             />
+            {errors.nama && (
+              <p className="mt-1 text-xs text-red-400">{errors.nama}</p>
+            )}
           </div>
 
           <div className="flex flex-col gap-1">
             <label className="text-sm text-white/80">Email</label>
             <Input
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="JohnCarter@gmail.com"
               variant="flat"
               radius="sm"
@@ -43,11 +103,16 @@ export const ContactMobile = () => {
                 input: "text-white placeholder:text-white/40",
               }}
             />
+            {errors.email && (
+              <p className="mt-1 text-xs text-red-400">{errors.email}</p>
+            )}
           </div>
 
           <div className="flex flex-col gap-1">
             <label className="text-sm text-white/80">Message</label>
             <Textarea
+              value={pesan}
+              onChange={(e) => setPesan(e.target.value)}
               placeholder="Type your message"
               minRows={3}
               variant="flat"
@@ -57,9 +122,13 @@ export const ContactMobile = () => {
                 input: "text-white placeholder:text-white/40",
               }}
             />
+            {errors.pesan && (
+              <p className="mt-1 text-xs text-red-400">{errors.pesan}</p>
+            )}
           </div>
 
           <Button
+            onPress={handleSendWhatsApp}
             className="mt-2 rounded-full border border-white/10 bg-transparent text-white"
             variant="bordered"
           >
