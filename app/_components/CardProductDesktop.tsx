@@ -1,5 +1,10 @@
 "use client";
 
+import DashboardEventImg from "@/assets/portofolio/dashboard-mockup.jpg";
+import essImg from "@/assets/portofolio/ess-mockup.jpg";
+import idekeenImg from "@/assets/portofolio/idekeen-mockup.jpg";
+import booksImg from "@/assets/portofolio/ngebook-mockup.jpg";
+import quizzImg from "@/assets/portofolio/quiz-mockup.jpg";
 import { IconRightArrow } from "@/components/icons/IconRightArrow";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Image } from "@heroui/image";
@@ -7,34 +12,29 @@ import { useEffect, useState } from "react";
 
 const cardData = [
   {
-    title: "Landing Page",
-    desc: "Tempat bisnis anda untuk memperkenalkan lorem ipsum dolor sit amet produk dan layanan anda",
-    img: "https://heroui.com/images/hero-card-complete.jpeg",
+    title: "Indekeen",
+    desc: "Landing page bisnis untuk memperkenalkan produk dan layanan Anda",
+    img: idekeenImg.src,
   },
   {
-    title: "Company Profile",
-    desc: "Website untuk menampilkan profil perusahaan, visi misi, dan layanan utama.",
-    img: "https://heroui.com/images/hero-card-complete.jpeg",
+    title: "Dashboard Event",
+    desc: "Sistem Manajemen yang memudahkan aktivitas operasional perusahaan Anda",
+    img: DashboardEventImg.src,
   },
   {
-    title: "E-Commerce",
-    desc: "Tingkatkan penjualan dengan toko online yang modern dan responsif.",
-    img: "https://heroui.com/images/hero-card-complete.jpeg",
+    title: "Quizz App",
+    desc: "Buat quiz atau survey dengan mudah di custome sesuai kebutuhan Anda",
+    img: quizzImg.src,
   },
   {
-    title: "Portfolio",
-    desc: "Tampilkan karya terbaik anda dalam website yang elegan dan menarik.",
-    img: "https://heroui.com/images/hero-card-complete.jpeg",
+    title: "Books App",
+    desc: "Aplikasi manajemen buku store online sederhana dengan design menarik dan user friendly",
+    img: booksImg.src,
   },
   {
-    title: "Blog",
-    desc: "Sajikan konten artikel dan berita terbaru untuk audiens anda.",
-    img: "https://heroui.com/images/hero-card-complete.jpeg",
-  },
-  {
-    title: "Dashboard",
-    desc: "Pantau data bisnis anda dengan dashboard interaktif.",
-    img: "https://heroui.com/images/hero-card-complete.jpeg",
+    title: "ESS Telkom",
+    desc: "Landing page komunikasi untuk memperkenalkan program dan produk komunitas Anda",
+    img: essImg.src,
   },
 ];
 
@@ -130,8 +130,8 @@ export default function CardProductDesktop() {
                   alt="Card background"
                   className="rounded-xl object-cover"
                   src={card.img}
-                  width={345.1907653808594}
-                  height={242.29888916015625}
+                  width={345}
+                  height={242}
                 />
               </CardHeader>
               <CardBody className="mt-[20px] flex flex-col items-start px-5 pb-2 md:mt-[30px] md:px-6">

@@ -4,8 +4,6 @@ import { NOMORWA } from "@/utils/constans";
 import { Button } from "@heroui/button";
 import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
-import CardPaketLayananDesktop from "./_components/CardPaketLayananDesktop";
-import CardPaketLayananMobile from "./_components/CardPaketLayananMobile";
 import CardProductDesktop from "./_components/CardProductDesktop";
 import CardProductMobile from "./_components/CardProductMobile";
 import { ContactDesktop } from "./_components/ContactDesktop";
@@ -79,7 +77,7 @@ export default function Home() {
       </div>
 
       {/* Section Paket Layanan */}
-      <div className="bg-neutral-custom-800 relative mt-5 flex h-auto w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]">
+      {/* <div className="bg-neutral-custom-800 relative mt-5 flex h-auto w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]">
         <div className="flex w-full flex-col items-center px-8 py-[38px]">
           <h1 className="block bg-gradient-to-r from-[#EEEEEE] to-[#545454] bg-clip-text [font-size:clamp(24px,6vw,44px)] font-bold text-transparent lg:hidden">
             Paket Layanan
@@ -100,7 +98,7 @@ export default function Home() {
             <Image src="/EllipseSecond.svg" />
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Section Contact */}
       {/* Mobile  */}
