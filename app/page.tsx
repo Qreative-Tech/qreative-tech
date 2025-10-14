@@ -1,95 +1,43 @@
 import { IconPhone } from "@/components/icons/IconPhone";
 import { IconRightArrow } from "@/components/icons/IconRightArrow";
+import { NOMORWA } from "@/utils/constans";
 import { Button } from "@heroui/button";
 import { Image } from "@heroui/image";
-import CardDesktop from "./_components/CardDesktop";
+import { Link } from "@heroui/link";
 import CardPaketLayananDesktop from "./_components/CardPaketLayananDesktop";
 import CardPaketLayananMobile from "./_components/CardPaketLayananMobile";
 import CardProductDesktop from "./_components/CardProductDesktop";
 import CardProductMobile from "./_components/CardProductMobile";
-import { CardsMobile } from "./_components/CardsMobile";
 import { ContactDesktop } from "./_components/ContactDesktop";
 import { ContactMobile } from "./_components/ContactMobile";
+import { HeroSection } from "./_components/HeroSection";
+import { KeunggulanSection } from "./_components/KeunggulanSection";
 
 export default function Home() {
   return (
     <section className="relative flex h-full flex-col items-center justify-center gap-0 overflow-hidden lg:pt-10">
       {/* Section Hero */}
-      <div className="mx-[15px] flex h-full w-full flex-col items-start gap-4 lg:mx-[72px] lg:flex-row lg:items-center">
-        {/* Left Section */}
-        <div className="relative z-10 inline-block w-full justify-start ps-4 text-start lg:ps-10">
-          {/* Judul */}
-          <h1 className="ps-4 [font-size:clamp(28px,6vw,48rem)] font-bold lg:ps-6 lg:text-6xl">
-            Jasa Pembuatan
-          </h1>
-
-          {/* Highlight */}
-          <div className="mt-2 w-fit rounded-lg border border-white/5 bg-white/5 px-[12px] lg:px-[25.62px] lg:py-[13px]">
-            <h1 className="text-warning-300 text-[28px] font-bold lg:text-6xl">
-              Website Profesional
-            </h1>
-          </div>
-
-          {/* Desktop Deskripsi */}
-          <div className="text-neutral-custom-300 mt-4 hidden w-fit ps-4 text-[14px] lg:block lg:w-[800px] lg:ps-6 lg:text-[20px]">
-            <p>
-              Permudah aktivitas bisnis dan perusahaan anda dengan solusi
-              digital kami.
-            </p>
-            <p>
-              Dapatkan{" "}
-              <span className="font-bold">kemudahan & kualitas unggul</span>{" "}
-              untuk mengoptimalkan potensi bisnis anda.
-            </p>
-          </div>
-
-          {/* Tombol Desktop */}
-          <Button
-            variant="solid"
-            color="secondary"
-            radius="full"
-            className="border-accent-700 mt-8 hidden h-[39px] items-center justify-center border px-5 py-2 text-sm font-bold lg:flex lg:h-[62px] lg:px-[26px] lg:py-[18px] lg:text-[20px]"
-            endContent={
-              <IconRightArrow size={30} className="text-accent-400 ms-2" />
-            }
-          >
-            Pesan Sekarang
-          </Button>
-
-          {/* Mobile Deskripsi */}
-          <div className="text-neutral-custom-300 mt-4 w-fit ps-4 text-[14px] lg:hidden">
-            <p>Dapatkan kemudahan dan kualitas unggul</p>
-            <p>Untuk mengoptimalkan potensi bisnis Anda.</p>
-          </div>
-
-          {/* Tombol Mobile */}
-          <div className="relative z-10 mt-4 ps-4 lg:hidden">
-            <Button
-              variant="solid"
-              color="secondary"
-              radius="full"
-              className="border-accent-700 h-[40px] border px-[18px] py-[10px] text-sm text-[14px] font-bold"
-              endContent={
-                <IconRightArrow size={18} className="text-accent-400 ms-2" />
-              }
-            >
-              Pesan Sekarang
-            </Button>
-          </div>
-        </div>
-
-        {/* Right Section - Desktop */}
-        <div className="relative hidden w-full items-center justify-center pe-10 lg:flex">
-          <Image
-            alt="PC Image"
-            src="/computer.png"
-            width={445}
-            height={470}
-            className="object-contain"
-          />
-        </div>
+      {/* <div className="absolute top-[-250px] left-0 z-2 border-1">
+        <Image
+          alt="Glow Left"
+          src="/Glow2.svg"
+          // width={684}
+          // height={681}
+          className="object-contain"
+        />
+      </div> */}
+      <div id="home" className="relative w-full">
+        <HeroSection />
       </div>
-
+      <div className="absolute top-55 right-[-100px] z-0">
+        <Image
+          alt="Glow Right"
+          src="/Glow.svg"
+          width={684}
+          height={681}
+          className="object-contain"
+        />
+      </div>
       {/* Mobile Image absolute */}
       <div className="absolute top-[185px] right-0 z-0 w-[80%] translate-x-1/2 lg:hidden">
         <Image
@@ -102,50 +50,15 @@ export default function Home() {
       </div>
 
       {/* Section Keunggulan */}
-      <div className="bg-neutral-custom-800 mt-5 flex h-auto w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]">
-        {/* Judul */}
-        <div className="flex w-full flex-col items-start justify-between px-2 md:flex-row">
-          <div className="pt-4">
-            <h1 className="text-accent-300 [font-size:clamp(28px,6vw,3rem)] font-bold md:text-5xl">
-              Buat Website{" "}
-              <span className="text-neutral-custom-300 hidden md:inline">
-                Ekslusif
-              </span>
-            </h1>
-            <h1 className="text-neutral-custom-300 text-[28px] font-bold md:hidden md:text-5xl">
-              Ekslusif
-            </h1>
-            <h2 className="text-neutral-custom-300 text-[12px] font-medium md:text-[24px]">
-              untuk brand Anda
-            </h2>
-          </div>
-          <div className="text-neutral-custom-500 hidden text-right lg:block">
-            <p className="text-[16px] font-medium">
-              Solusi eksklusif pembuatan website, web app, dan landing page
-              untuk bisnis
-            </p>
-            <p className="text-[16px] font-medium">
-              yang mengutamakan kualitas, efisiensi, dan hasil nyata.
-            </p>
-          </div>
-        </div>
-
-        {/* Cards Mobile */}
-        <div className="block lg:hidden">
-          <CardsMobile />
-          <p className="text-accent-500 mt-[38px] max-w-[420px] ps-2 [font-size:clamp(13px,2vw,1rem)] font-normal">
-            Solusi eksklusif pembuatan website, web app, dan landing page untuk
-            bisnis yang mengutamakan kualitas dan efisiensi.
-          </p>
-        </div>
-        {/* Cards Desktop */}
-        <div className="hidden lg:block">
-          <CardDesktop />
-        </div>
+      <div className="relative w-full">
+        <KeunggulanSection />
       </div>
 
       {/* Section Product */}
-      <div className="mt-5 flex h-auto w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]">
+      <div
+        id="product"
+        className="relative mt-5 flex h-auto w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]"
+      >
         <div className="flex w-full flex-col items-center px-[58px]">
           <h1 className="[font-size:clamp(24px,6vw,44px)] font-semibold text-white md:text-5xl">
             Produk Kami
@@ -160,10 +73,13 @@ export default function Home() {
         <div className="hidden md:block">
           <CardProductDesktop />
         </div>
+        <div className="absolute top-[500px] z-0">
+          <Image src="/Ellipse.svg" />
+        </div>
       </div>
 
       {/* Section Paket Layanan */}
-      <div className="bg-neutral-custom-800 mt-5 flex h-auto w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]">
+      <div className="bg-neutral-custom-800 relative mt-5 flex h-auto w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]">
         <div className="flex w-full flex-col items-center px-8 py-[38px]">
           <h1 className="block bg-gradient-to-r from-[#EEEEEE] to-[#545454] bg-clip-text [font-size:clamp(24px,6vw,44px)] font-bold text-transparent lg:hidden">
             Paket Layanan
@@ -171,11 +87,17 @@ export default function Home() {
           <h1 className="hidden [font-size:clamp(24px,6vw,44px)] font-bold text-white lg:block">
             Paket Layanan untuk Anda
           </h1>
-          <div className="block lg:hidden">
+          <div className="z-10 block lg:hidden">
             <CardPaketLayananMobile />
           </div>
-          <div className="hidden lg:block">
+          <div className="z-10 hidden w-full justify-center lg:flex">
             <CardPaketLayananDesktop />
+          </div>
+          <div className="absolute top-0 z-[0] hidden md:block">
+            <Image src="/EllipseSecond.svg" />
+          </div>
+          <div className="absolute bottom-[75px] z-[0] md:hidden">
+            <Image src="/EllipseSecond.svg" />
           </div>
         </div>
       </div>
@@ -194,10 +116,16 @@ export default function Home() {
         </p>
         <div className="flex w-full flex-row items-center justify-between">
           <Button
-            className="bg-warning-100 text-warning-700 my-5 text-[12px] font-bold"
+            as={Link}
+            href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
+              "Halo! Saya tertarik dengan layanan pembuatan website dari Qreative Tech. Bisa bantu jelaskan lebih lanjut?",
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-warning-100 text-warning-700 my-5 text-[15px] font-bold"
             radius="full"
             size="md"
-            startContent={<IconPhone size={12} />}
+            startContent={<IconPhone size={15} />}
           >
             Hubungi tim kami
           </Button>
@@ -227,6 +155,12 @@ export default function Home() {
             className="bg-warning-800 text-warning-50 my-5 px-[24px] py-[16px] text-[20px] font-bold"
             radius="full"
             size="lg"
+            as={Link}
+            href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
+              "Halo! Saya tertarik dengan layanan pembuatan website dari Qreative Tech. Bisa bantu jelaskan lebih lanjut?",
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Hubungi Kami
           </Button>
@@ -235,6 +169,12 @@ export default function Home() {
             radius="full"
             size="lg"
             startContent={<IconPhone size={25} color="#BD7A00" />}
+            as={Link}
+            href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
+              "Halo! Saya ingin mendiskusikan kebutuhan website saya dengan tim Qreative Tech. Bisa bantu saya menentukan paket yang cocok?",
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Diskusikan Kebutuhan Anda
           </Button>
@@ -243,7 +183,10 @@ export default function Home() {
 
       {/* Section Tentang Kami */}
       {/* Mobile */}
-      <div className="my-[82px] flex flex-col items-center justify-center gap-4 py-8 md:py-10 lg:hidden">
+      <div
+        id="about"
+        className="my-[82px] flex flex-col items-center justify-center gap-4 py-8 md:py-10 lg:hidden"
+      >
         <div className="bg-neutral-custom-800 rounded-[37px]">
           <Image src="/group.svg" alt="group" width={252} height={165} />
         </div>
@@ -268,7 +211,10 @@ export default function Home() {
         </div>
       </div>
       {/* Desktop */}
-      <div className="my-[82px] hidden h-[733px] w-full flex-row items-center justify-center gap-4 px-[100px] py-8 md:py-10 lg:flex">
+      <div
+        id="about"
+        className="my-[82px] hidden h-[733px] w-full flex-row items-center justify-center gap-4 px-[100px] py-8 md:py-10 lg:flex"
+      >
         <Image src="/groupEllipse.svg" alt="group" width={569} height={389} />
         <div className="mt-5 flex flex-col items-start justify-center px-[50px]">
           <h1 className="text-neutral-custom-200 text-start [font-size:clamp(24px,6vw,44px)] font-bold">
@@ -293,11 +239,11 @@ export default function Home() {
 
       {/* Section Kontak */}
       {/* Mobile */}
-      <div className="block w-full lg:hidden">
+      <div id="contact" className="block w-full lg:hidden">
         <ContactMobile />
       </div>
       {/* Desktop */}
-      <div className="hidden w-full lg:block">
+      <div id="contact" className="hidden w-full lg:block">
         <ContactDesktop />
       </div>
     </section>

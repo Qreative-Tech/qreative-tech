@@ -2,6 +2,7 @@
 
 import { Button } from "@heroui/button";
 import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Link } from "@heroui/link";
 
 export default function CardPaketLayananDesktop() {
   // Tambahkan satu data paket agar total 3
@@ -39,12 +40,14 @@ export default function CardPaketLayananDesktop() {
   ];
 
   return (
-    <div className="relative mt-8 grid w-full max-w-5xl grid-cols-1 items-stretch justify-center gap-8 md:grid-cols-3">
+    <div className="relative mt-8 grid w-full max-w-[1200px] place-items-center items-stretch justify-center gap-8 md:grid-cols-3">
       {paketData.map((paket, idx) => (
         <Card
           key={idx}
           radius="none"
-          className="border-accent-700 relative flex w-full max-w-[300px] flex-col rounded-b-2xl border bg-gradient-to-b from-[#282828] to-[#1C1C1C]"
+          className={`border-accent-700 relative flex w-full flex-col rounded-b-2xl border-2 bg-gradient-to-b from-[#282828] to-[#1C1C1C] ${
+            idx === 1 ? "h-fit max-w-[420px]" : "mt-[25px] h-fit max-w-[350px]"
+          }`}
         >
           {/* Header paket */}
           <CardHeader className="bg-accent-800 flex w-full flex-row items-center justify-center rounded-b-xl px-[30.53px] py-[17.45px]">
@@ -58,16 +61,24 @@ export default function CardPaketLayananDesktop() {
               <p className="text-neutral-custom-600 text-sm font-bold">
                 Start from
               </p>
-              <h2 className="mt-2 text-3xl font-bold text-white">
+              <h2
+                className={`mt-2 ${idx === 1 ? "text-3xl" : "text-2xl"} font-bold text-white`}
+              >
                 {paket.startPrice}
               </h2>
               <div className="mt-4 rounded-lg bg-[#282829] px-[24px] py-[6px]">
-                <p className="text-neutral-custom-400 text-sm">{paket.desc}</p>
+                <p
+                  className={`text-neutral-custom-400 ${idx === 1 ? "text-sm" : "text-xs"}`}
+                >
+                  {paket.desc}
+                </p>
               </div>
             </div>
 
             {/* Daftar pilihan paket */}
-            <div className="border-neutral-custom-700 w-full space-y-2 rounded-lg border p-3 text-sm">
+            <div
+              className={`border-neutral-custom-700 w-full ${idx === 1 ? "space-y-2" : "space-y-0"} rounded-lg border p-3 text-sm`}
+            >
               {paket.options.map((opt, i) => (
                 <div
                   key={i}
@@ -84,7 +95,13 @@ export default function CardPaketLayananDesktop() {
               variant="solid"
               color="secondary"
               radius="full"
-              className="border-accent-700 my-5 h-[40px] min-w-[150px] border px-[18px] py-[10px] text-sm text-[14px] font-bold"
+              className={`border-accent-700 ${idx === 1 ? "my-5" : "my-0"} ${idx === 1 ? "unset" : "mb-2"} h-[40px] min-w-[150px] border px-[18px] py-[10px] text-sm text-[14px] font-bold`}
+              as={Link}
+              href={`https://wa.me/6285231796284?text=${encodeURIComponent(
+                `Halo! Saya tertarik dengan *${paket.title}* yang ditawarkan di Qreative Tech. Bisa dibantu jelaskan detail dan proses pemesanannya?`,
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Pilih Paket
             </Button>

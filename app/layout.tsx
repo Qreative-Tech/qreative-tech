@@ -50,7 +50,7 @@ export default function RootLayout({
         >
           <div className="relative flex min-h-screen flex-col">
             <Navbar />
-            <main className="mt-14 flex-grow md:pt-16">{children}</main>
+            <main className="mt-0 flex-grow md:pt-16">{children}</main>
 
             <footer className="bg-brand-900 flex w-full flex-row items-center justify-between px-[40px] py-[20px] lg:px-[90px]">
               {/* <Link
@@ -66,12 +66,22 @@ export default function RootLayout({
               <p className="text-neutral-custom-600 text-[11px] font-bold lg:text-[18px]">
                 Copyright © 2025 Qreative Tech
               </p>
-              <Image
-                src="/qreativeLogoV2.svg"
-                alt="Qreative Logo"
-                width={214}
-                height={52}
-              />
+              <div className="hidden items-center md:flex">
+                <Image
+                  src="/qreativeLogoV2.svg"
+                  alt="Qreative Logo"
+                  width={214}
+                  height={52}
+                />
+              </div>
+              <div className="flex justify-end md:hidden">
+                <Image
+                  src="/qreativeLogoHead.svg"
+                  alt="Qreative Logo"
+                  width={28}
+                  height={26}
+                />
+              </div>
             </footer>
           </div>
         </Providers>

@@ -3,6 +3,7 @@
 import { IconRightArrow } from "@/components/icons/IconRightArrow";
 import { Button } from "@heroui/button";
 import { Card, CardBody, CardHeader } from "@heroui/card";
+import { Link } from "@heroui/link";
 import { useState } from "react";
 
 const paketData = [
@@ -44,11 +45,11 @@ export default function CardPaketLayananMobile() {
       {/* Tombol kiri */}
       <button
         onClick={prev}
-        className="absolute top-1/2 left-[-28px] z-1 -translate-y-1/2 rounded-full border border-white/10 bg-white/10 p-2 text-white hover:bg-white/20"
+        className="absolute top-1/2 left-[-45px] z-1 -translate-y-1/2 p-2 text-white"
       >
         <IconRightArrow
           size={30}
-          className="rotate-[-180deg] text-white"
+          className="text-accent-600 rotate-[-180deg]"
           variant="Bold"
         />
       </button>
@@ -99,6 +100,12 @@ export default function CardPaketLayananMobile() {
             color="secondary"
             radius="full"
             className="border-accent-700 my-5 h-[40px] min-w-[150px] border px-[18px] py-[10px] text-sm text-[14px] font-bold"
+            as={Link}
+            href={`https://wa.me/6285231796284?text=${encodeURIComponent(
+              `Halo! Saya tertarik dengan *${paketData[current].title}* yang ditawarkan di Qreative Tech. Bisa dibantu jelaskan detail dan proses pemesanannya?`,
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
           >
             Pilih Paket
           </Button>
@@ -108,9 +115,9 @@ export default function CardPaketLayananMobile() {
       {/* Tombol kanan */}
       <button
         onClick={next}
-        className="absolute top-1/2 right-[-28px] -translate-y-1/2 rounded-full border border-white/10 bg-white/10 p-2 text-white hover:bg-white/20"
+        className="absolute top-1/2 right-[-40px] -translate-y-1/2"
       >
-        <IconRightArrow size={30} className="text-white" variant="Bold" />
+        <IconRightArrow size={30} className="text-accent-600" variant="Bold" />
       </button>
 
       {/* Indicator bar */}

@@ -3,9 +3,11 @@
 import { IconEmail } from "@/components/icons/IconEmail";
 import { IconPhone } from "@/components/icons/IconPhone";
 import { IconPoint } from "@/components/icons/IconPoint";
+import { NOMORWA } from "@/utils/constans";
 import { Button } from "@heroui/button";
 import { Card } from "@heroui/card";
 import { Input, Textarea } from "@heroui/input";
+import { Link } from "@heroui/link";
 
 export const ContactMobile = () => {
   return (
@@ -78,45 +80,76 @@ export const ContactMobile = () => {
       <div className="absolute top-[500px] flex w-full flex-col items-start justify-start gap-2 px-[45px]">
         <div className="flex flex-row items-center gap-3">
           <Button
+            as={Link}
+            href="mailto:qreativetech@gmail.com"
             size="sm"
             isIconOnly
             radius="full"
-            aria-label="Phone"
+            aria-label="Email"
             className="bg-[#292929]"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <IconEmail size={12} className="text-warning-300" />
           </Button>
-          <p className="text-neutral-custom-400 text-[12px] font-medium">
+          <Link
+            href="mailto:qreativetech@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-custom-400 hover:text-warning-400 text-[12px] font-medium transition-colors"
+          >
             qreativetech@gmail.com
-          </p>
+          </Link>
         </div>
         <div className="flex flex-row items-center gap-3">
           <Button
+            as={Link}
+            href={`https://wa.me/6285231796284?text=${encodeURIComponent(
+              "Halo! Saya tertarik dengan layanan pembuatan website dari Qreative Tech.",
+            )}`}
             size="sm"
             isIconOnly
             radius="full"
             aria-label="Phone"
             className="bg-[#292929]"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <IconPhone size={12} className="text-warning-300" />
           </Button>
-          <p className="text-neutral-custom-400 text-[12px] font-medium">
-            (+62) 85231796284
-          </p>
+          <Link
+            href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
+              "Halo! Saya tertarik dengan layanan pembuatan website dari Qreative Tech.",
+            )}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-custom-400 hover:text-warning-400 text-[12px] font-medium transition-colors"
+          >
+            (+62) 852-3179-6284
+          </Link>
         </div>
         <div className="flex flex-row items-center gap-3">
           <Button
+            as={Link}
+            href="https://www.google.com/maps?q=Banyuwangi,+Jawa+Timur,+Indonesia+68482"
             size="sm"
             isIconOnly
             radius="full"
-            aria-label="Phone"
+            aria-label="Location"
             className="bg-[#292929]"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <IconPoint size={12} className="text-warning-300" />
           </Button>
-          <p className="text-neutral-custom-400 text-[12px] font-medium">
-            Jawa Timur, Indonesia Banyuwangi, 68482
-          </p>
+          <Link
+            href="https://www.google.com/maps?q=Banyuwangi,+Jawa+Timur,+Indonesia+68482"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-neutral-custom-400 hover:text-warning-400 text-[12px] font-medium transition-colors"
+          >
+            Jawa Timur, Indonesia — Banyuwangi, 68482
+          </Link>
         </div>
       </div>
     </div>
