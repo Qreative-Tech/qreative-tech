@@ -52,7 +52,6 @@ export const Navbar = () => {
     // fungsi pembaca hash
     const updateHash = () => {
       setHash(window.location.hash);
-      console.log("Hash berubah:", window.location.hash);
     };
 
     // jalankan sekali saat mount
@@ -65,12 +64,10 @@ export const Navbar = () => {
     return () => window.removeEventListener("hashchange", updateHash);
   }, []);
 
-  console.log("hash", hash);
-
   return (
     <HeroUINavbar
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-black-500 h-[101.07975769042969px] md:px-5"
+      className="bg-black-500 h-[101px] md:px-5"
       maxWidth="full"
     >
       {/* Logo */}
@@ -88,7 +85,7 @@ export const Navbar = () => {
         <NavbarItem>
           <Link
             color="foreground"
-            href="#home"
+            href="/#home"
             aria-current="page"
             className="text-sm md:text-[17.1px]"
           >
@@ -99,7 +96,7 @@ export const Navbar = () => {
           <Link
             color="foreground"
             aria-current="page"
-            href="#product"
+            href="/#product"
             className="text-sm md:text-[17.1px]"
           >
             Product
@@ -108,7 +105,7 @@ export const Navbar = () => {
         <NavbarItem>
           <Link
             color="foreground"
-            href="#about"
+            href="/#about"
             aria-current="page"
             className="text-sm md:text-[17.1px]"
           >
@@ -118,7 +115,7 @@ export const Navbar = () => {
         <NavbarItem>
           <Link
             color="foreground"
-            href="#contact"
+            href="/#contact"
             aria-current="page"
             className="text-sm md:text-[17.1px]"
           >

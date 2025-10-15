@@ -51,7 +51,7 @@ export default function RootLayout({
         >
           <div className="relative flex min-h-screen flex-col">
             <Navbar />
-            <main className="mt-0 flex-grow md:pt-16">{children}</main>
+            <main className="mt-0 flex-grow">{children}</main>
 
             <footer className="bg-brand-900 flex w-full flex-row items-center justify-between px-[40px] py-[20px] lg:px-[90px]">
               {/* <Link

@@ -1,44 +1,14 @@
 "use client";
 
-import DashboardEventImg from "@/assets/portofolio/dashboard-mockup.jpg";
-import essImg from "@/assets/portofolio/ess-mockup.jpg";
-import idekeenImg from "@/assets/portofolio/idekeen-mockup.jpg";
-import booksImg from "@/assets/portofolio/ngebook-mockup.jpg";
-import quizzImg from "@/assets/portofolio/quiz-mockup.jpg";
 import { IconRightArrow } from "@/components/icons/IconRightArrow";
+import { listProduk } from "@/utils/constans";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Image } from "@heroui/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const cardData = [
-  {
-    title: "Indekeen",
-    desc: "Landing page bisnis untuk memperkenalkan produk dan layanan Anda",
-    img: idekeenImg.src,
-  },
-  {
-    title: "Dashboard Event",
-    desc: "Sistem Manajemen yang memudahkan aktivitas operasional perusahaan Anda",
-    img: DashboardEventImg.src,
-  },
-  {
-    title: "Quizz App",
-    desc: "Buat quiz atau survey dengan mudah di custome sesuai kebutuhan Anda",
-    img: quizzImg.src,
-  },
-  {
-    title: "Books App",
-    desc: "Aplikasi manajemen buku store online sederhana dengan design menarik dan user friendly",
-    img: booksImg.src,
-  },
-  {
-    title: "ESS Telkom",
-    desc: "Landing page komunikasi untuk memperkenalkan program dan produk komunitas Anda",
-    img: essImg.src,
-  },
-];
-
 export default function CardProductDesktop() {
+  const router = useRouter();
   const [itemsPerSlide, setItemsPerSlide] = useState(4);
 
   useEffect(() => {
@@ -57,7 +27,7 @@ export default function CardProductDesktop() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const totalSlides = Math.ceil(cardData.length / itemsPerSlide);
+  const totalSlides = Math.ceil(listProduk.length / itemsPerSlide);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -74,7 +44,7 @@ export default function CardProductDesktop() {
   };
 
   const startIndex = currentSlide * itemsPerSlide;
-  const visibleCards = cardData.slice(startIndex, startIndex + itemsPerSlide);
+  const visibleCards = listProduk.slice(startIndex, startIndex + itemsPerSlide);
   // Tentukan spacing responsif
   let spacing = 320; // default (xl)
   if (typeof window !== "undefined") {
@@ -143,7 +113,7 @@ export default function CardProductDesktop() {
                 </p>
                 <div
                   className="mt-3 mb-[20px] flex cursor-pointer flex-row items-center gap-2"
-                  onClick={() => {}}
+                  onClick={() => router.push(`/produk/${card.slug}`)}
                 >
                   <p className="text-warning-300 cursor-pointer text-[15px] font-bold md:text-[16px]">
                     Read more

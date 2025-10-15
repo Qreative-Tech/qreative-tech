@@ -1,37 +1,20 @@
 "use client";
 
 import { IconRightArrow } from "@/components/icons/IconRightArrow";
+import { listProduk } from "@/utils/constans";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Image } from "@heroui/image";
 import { useState } from "react";
-
-const cardData = [
-  {
-    title: "Landing Page",
-    desc: "Tempat bisnis anda untuk memperkenalkan lorem ipsum dolor sit amet produk dan layanan anda",
-    img: "https://heroui.com/images/hero-card-complete.jpeg",
-  },
-  {
-    title: "Company Profile",
-    desc: "Website untuk menampilkan profil perusahaan, visi misi, dan layanan utama.",
-    img: "https://heroui.com/images/hero-card-complete.jpeg",
-  },
-  {
-    title: "E-Commerce",
-    desc: "Tingkatkan penjualan dengan toko online yang modern dan responsif.",
-    img: "https://heroui.com/images/hero-card-complete.jpeg",
-  },
-];
 
 export default function CardProductMobile() {
   const [current, setCurrent] = useState(0);
 
   const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? cardData.length - 1 : prev - 1));
+    setCurrent((prev) => (prev === 0 ? listProduk.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev === cardData.length - 1 ? 0 : prev + 1));
+    setCurrent((prev) => (prev === listProduk.length - 1 ? 0 : prev + 1));
   };
 
   return (
@@ -42,16 +25,16 @@ export default function CardProductMobile() {
           <Image
             alt="Card background"
             className="rounded-xl object-cover"
-            src={cardData[current].img}
+            src={listProduk[current].img}
             width={245}
           />
         </CardHeader>
         <CardBody className="mt-3 flex flex-col items-start px-4 pt-2 pb-2">
           <h1 className="text-[14px] font-bold text-white">
-            {cardData[current].title}
+            {listProduk[current].title}
           </h1>
           <p className="mt-1 bg-gradient-to-b from-[#C2C2C2] to-[#696969] bg-clip-text text-[12px] text-transparent">
-            {cardData[current].desc}
+            {listProduk[current].desc}
           </p>
           <div
             className="mt-3 flex cursor-pointer flex-row items-center gap-2"
@@ -77,7 +60,7 @@ export default function CardProductMobile() {
           />
         </button>
         <div className="flex gap-1">
-          {cardData.map((_, i) => (
+          {listProduk.map((_, i) => (
             <span
               key={i}
               className={`h-1.5 w-4 rounded-full transition-all ${
