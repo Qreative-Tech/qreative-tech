@@ -51,7 +51,7 @@ export default function RootLayout({
             forcedTheme: "light",
           }}
         >
-          <div className="relative flex min-h-screen flex-col">
+          <div className="relative mx-auto flex min-h-screen w-full max-w-[2560px] flex-col">
             <Navbar />
             <main className="mt-0 flex-grow">{children}</main>
 
