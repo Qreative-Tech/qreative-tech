@@ -37,7 +37,7 @@ export default function Home() {
         />
       </div>
       {/* Mobile Image absolute */}
-      <div className="absolute top-[185px] right-0 z-0 w-[80%] translate-x-1/2 lg:hidden">
+      <div className="absolute top-[185px] right-0 z-1 w-[80%] translate-x-1/2 lg:hidden">
         <Image
           alt="PC Image"
           src="/computer.png"
