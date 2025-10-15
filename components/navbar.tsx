@@ -12,57 +12,12 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@heroui/navbar";
-import { usePathname } from "next/navigation";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const pathname = usePathname();
-  // console.log("Pathname", pathname);
   const menuItems = ["Home", "Product", "About", "Contact Us"];
-
-  const [activeHash, setActiveHash] = useState("home");
-
-  useEffect(() => {
-    const updateHash = () => {
-      const hash = window.location.hash.replace("#", "") || "home";
-      setActiveHash(hash);
-      console.log("hash changed:", hash);
-    };
-
-    // Jalankan sekali saat pertama render
-    updateHash();
-
-    // Dengarkan perubahan hash & tombol back/forward
-    window.addEventListener("hashchange", updateHash);
-    window.addEventListener("popstate", updateHash);
-
-    return () => {
-      window.removeEventListener("hashchange", updateHash);
-      window.removeEventListener("popstate", updateHash);
-    };
-  }, []);
-
-  // console.log("activeHash", activeHash);
-
-  const [hash, setHash] = useState<string | null>(null);
-
-  useEffect(() => {
-    // fungsi pembaca hash
-    const updateHash = () => {
-      setHash(window.location.hash);
-    };
-
-    // jalankan sekali saat mount
-    updateHash();
-
-    // tambahkan event listener untuk perubahan hash
-    window.addEventListener("hashchange", updateHash);
-
-    // bersihkan listener saat unmount
-    return () => window.removeEventListener("hashchange", updateHash);
-  }, []);
 
   return (
     <HeroUINavbar
@@ -151,24 +106,29 @@ export const Navbar = () => {
       </NavbarContent>
       {/* Mobile Menu */}
       <NavbarMenu className="bg-black-500">
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              className="w-full"
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                    ? "danger"
-                    : "foreground"
-              }
-              href="#"
-              size="lg"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
-        ))}
+        {menuItems.map((item, index) => {
+          console.log("item", item);
+          return (
+            <NavbarMenuItem key={`${item}-${index}`}>
+              <Link
+                className="w-full"
+                color="foreground"
+                // color={
+                //   index === 2
+                //     ? "primary"
+                //     : index === menuItems.length - 1
+                //       ? "danger"
+                //       : "foreground"
+                // }
+                href={`/#${item === "Contact Us" ? "contact" : item.toLowerCase()}`}
+                aria-current="page"
+                size="lg"
+              >
+                {item}
+              </Link>
+            </NavbarMenuItem>
+          );
+        })}
       </NavbarMenu>
     </HeroUINavbar>
   );
