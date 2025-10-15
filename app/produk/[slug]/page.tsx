@@ -65,7 +65,7 @@ export default function ProdukDetailPage() {
           <Tabs
             aria-label="Options"
             placement={"top"}
-            className="overflow-x-hidden"
+            className="mt-[20px] overflow-x-hidden md:mt-0"
             color="primary"
           >
             <Tab
@@ -74,7 +74,7 @@ export default function ProdukDetailPage() {
               className="w-full overflow-x-hidden"
             >
               {/* DESKRIPSI & FITUR */}
-              <div className="grid grid-cols-1 gap-8 px-0 py-10 md:grid-cols-3">
+              <div className="grid grid-cols-1 gap-8 px-0 py-5 md:grid-cols-3 md:py-10">
                 <div className="md:col-span-2">
                   <h2 className="mb-3 text-xl font-semibold">Deskripsi</h2>
                   <p className="leading-relaxed whitespace-pre-line text-white">

@@ -4,9 +4,11 @@ import { IconRightArrow } from "@/components/icons/IconRightArrow";
 import { listProduk } from "@/utils/constans";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Image } from "@heroui/image";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function CardProductMobile() {
+  const router = useRouter();
   const [current, setCurrent] = useState(0);
 
   const prevSlide = () => {
@@ -38,7 +40,7 @@ export default function CardProductMobile() {
           </p>
           <div
             className="mt-3 flex cursor-pointer flex-row items-center gap-2"
-            onClick={() => {}}
+            onClick={() => router.push(`/produk/${listProduk[current].slug}`)}
           >
             <p className="text-warning-300 text-[12px] font-bold">Read more</p>
             <IconRightArrow
