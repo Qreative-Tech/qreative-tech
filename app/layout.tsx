@@ -10,6 +10,8 @@ import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
 import { Image } from "@heroui/image";
 
+import { Analytics } from "@vercel/analytics/next";
+
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
@@ -86,6 +88,7 @@ export default function RootLayout({
             </footer>
           </div>
         </Providers>
+        <Analytics />
       </body>
     </html>
   );
