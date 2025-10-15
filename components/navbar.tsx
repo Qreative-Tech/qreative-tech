@@ -14,6 +14,8 @@ import {
 } from "@heroui/navbar";
 
 import { useState } from "react";
+import { IconClose } from "./icons/IconClose";
+import { IconMenu } from "./icons/IconMenu";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +24,7 @@ export const Navbar = () => {
   return (
     <HeroUINavbar
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-black-500 h-[101px] md:px-5"
+      className="bg-black-500 h-[68px] md:h-[101px] md:px-5"
       maxWidth="full"
     >
       {/* Logo */}
@@ -102,6 +104,7 @@ export const Navbar = () => {
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
+          icon={isMenuOpen ? <IconClose size={24} /> : <IconMenu size={24} />}
         />
       </NavbarContent>
       {/* Mobile Menu */}
