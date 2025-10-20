@@ -15,15 +15,6 @@ export default function Home() {
   return (
     <section className="relative flex h-full flex-col items-center justify-center gap-0 overflow-hidden lg:pt-10">
       {/* Section Hero */}
-      {/* <div className="absolute top-[-250px] left-0 z-2 border-1">
-        <Image
-          alt="Glow Left"
-          src="/Glow2.svg"
-          // width={684}
-          // height={681}
-          className="object-contain"
-        />
-      </div> */}
       <div id="home" className="relative w-full scroll-mt-[101px]">
         <HeroSection />
       </div>
@@ -37,7 +28,7 @@ export default function Home() {
         />
       </div>
       {/* Mobile Image absolute */}
-      <div className="absolute top-[185px] right-0 z-1 w-[80%] translate-x-1/2 lg:hidden">
+      <div className="absolute top-[256px] right-0 z-1 w-[80%] translate-x-1/2 lg:hidden">
         <Image
           alt="PC Image"
           src="/computer.png"

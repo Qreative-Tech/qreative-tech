@@ -5,16 +5,16 @@ import { Link } from "@heroui/link";
 
 export const HeroSection = () => {
   return (
-    <div className="mx-[15px] mt-[25px] mb-[50px] flex h-full w-full flex-col items-start gap-4 lg:mx-[72px] lg:flex-row lg:items-center">
+    <div className="mt-[56px] mb-[50px] flex h-full w-full flex-col items-start gap-4 ps-[15px] pe-[10px] lg:mx-[72px] lg:flex-row lg:items-center">
       {/* Left Section */}
-      <div className="relative z-10 inline-block w-full justify-start ps-4 text-start lg:ps-[100px]">
+      <div className="relative z-10 inline-block w-full justify-start text-start lg:ps-[100px]">
         {/* Judul */}
-        <h1 className="ps-3 [font-size:clamp(28px,6vw,48rem)] font-bold lg:ps-6 lg:text-6xl">
+        <h1 className="ps-[14px] pt-[10px] [font-size:clamp(28px,6vw,48rem)] font-bold lg:ps-6 lg:text-6xl">
           Jasa Pembuatan
         </h1>
 
         {/* Highlight */}
-        <div className="mt-2 w-fit rounded-lg border border-white/5 bg-white/5 px-[12px] lg:px-[25.62px] lg:py-[13px]">
+        <div className="mt-2 w-fit rounded-lg border border-white/5 bg-white/5 px-[11px] lg:py-[13px]">
           <h1 className="text-warning-300 text-[28px] font-bold lg:text-6xl">
             Website Profesional
           </h1>
@@ -53,13 +53,13 @@ export const HeroSection = () => {
         </Button>
 
         {/* Mobile Deskripsi */}
-        <div className="text-neutral-custom-300 mt-4 w-fit ps-3 text-[14px] lg:hidden">
+        <div className="text-neutral-custom-300 mt-4 w-fit ps-[14px] text-[14px] lg:hidden">
           <p>Dapatkan kemudahan dan kualitas unggul</p>
           <p>Untuk mengoptimalkan potensi bisnis Anda.</p>
         </div>
 
         {/* Tombol Mobile */}
-        <div className="relative z-10 mt-4 ps-3 lg:hidden">
+        <div className="relative z-10 mt-[24px] ps-[14px] lg:hidden">
           <Button
             variant="solid"
             color="secondary"

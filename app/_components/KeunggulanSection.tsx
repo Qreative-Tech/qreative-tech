@@ -3,10 +3,10 @@ import { CardsMobile } from "./CardsMobile";
 
 export const KeunggulanSection = () => {
   return (
-    <div className="bg-neutral-custom-800 mt-5 flex min-h-[582px] w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]">
+    <div className="bg-neutral-custom-800 flex min-h-[582px] w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 pb-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]">
       {/* Judul */}
-      <div className="flex w-full flex-col items-start justify-between px-2 md:flex-row">
-        <div className="pt-4">
+      <div className="mt-[38px] flex w-full flex-col items-start justify-between px-2 md:flex-row">
+        <div>
           <h1 className="text-accent-300 [font-size:clamp(28px,6vw,3rem)] font-bold md:text-5xl">
             Buat Website{" "}
             <span className="text-neutral-custom-300 hidden md:inline">
@@ -34,7 +34,7 @@ export const KeunggulanSection = () => {
       {/* Cards Mobile */}
       <div className="block lg:hidden">
         <CardsMobile />
-        <p className="text-accent-500 mt-[38px] max-w-[420px] ps-2 [font-size:clamp(13px,2vw,1rem)] font-normal">
+        <p className="text-accent-500 mt-[38px] max-w-[420px] [font-size:clamp(11px,2vw,1rem)] font-normal">
           Solusi eksklusif pembuatan website, web app, dan landing page untuk
           bisnis yang mengutamakan kualitas dan efisiensi.
         </p>

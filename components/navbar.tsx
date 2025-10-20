@@ -24,7 +24,7 @@ export const Navbar = () => {
   return (
     <HeroUINavbar
       onMenuOpenChange={setIsMenuOpen}
-      className="bg-black-500 h-[68px] md:h-[101px] md:px-5"
+      className="bg-black-500 h-[69px] md:h-[101px] md:px-5"
       maxWidth="full"
     >
       {/* Logo */}

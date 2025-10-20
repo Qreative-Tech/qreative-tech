@@ -1,3 +1,4 @@
+import "@/styles/figma.css";
 import "@/styles/globals.css";
 import "@/styles/scrollbar.css";
 import clsx from "clsx";
