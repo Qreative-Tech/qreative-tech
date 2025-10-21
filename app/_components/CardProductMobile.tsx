@@ -20,7 +20,7 @@ export default function CardProductMobile() {
   };
 
   return (
-    <div className="relative z-20 mt-10 flex flex-col items-center">
+    <div className="relative z-20 flex flex-col items-center px-[36px]">
       {/* Card */}
       <Card className="w-[282px] border border-white/10 bg-white/5 py-1 shadow-inner backdrop-blur-sm transition-all duration-300">
         <CardHeader className="flex items-center justify-center px-4 pt-2 pb-0">

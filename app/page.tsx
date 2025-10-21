@@ -46,13 +46,13 @@ export default function Home() {
       {/* Section Product */}
       <div
         id="product"
-        className="relative mt-5 flex h-auto w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]"
+        className="relative flex h-auto w-full flex-col items-center justify-center gap-[42px] rounded-tl-[24px] rounded-br-[12px] pt-[72px] pb-[62px] text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]"
       >
-        <div className="flex w-full flex-col items-center px-[58px]">
+        <div className="flex w-full flex-col items-center gap-[6px] px-[58px]">
           <h1 className="[font-size:clamp(24px,6vw,44px)] font-semibold text-white md:text-5xl">
             Produk Kami
           </h1>
-          <p className="text-neutral-custom-500 mt-3 text-center text-[14px] font-medium">
+          <p className="text-neutral-custom-500 text-center text-[14px] font-medium">
             Tinjau sebagian dari proyek-proyek website terbaik qreative-tech
           </p>
         </div>
@@ -94,36 +94,42 @@ export default function Home() {
       {/* Section Contact */}
       {/* Mobile  */}
       <div className="bg-warning-400 relative flex w-full flex-col items-start px-[24px] py-[16px] lg:hidden">
-        <h1 className="text-warning-900 [font-size:clamp(20px,6vw,44px)] font-bold md:text-[44px]">
-          Buat website sekarang
-        </h1>
-        <p className="text-warning-800 [font-size:clamp(16px,6vw,33px)] font-bold md:text-[33px]">
-          <span className="text-warning-900 [font-size:clamp(16px,6vw,33px)] font-bold italic md:text-[33px]">
-            Atau {""}
-          </span>
-          diskusikan kebutuhan anda
-        </p>
-        <div className="flex w-full flex-row items-center justify-between">
-          <Button
-            as={Link}
-            href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
-              "Halo! Saya tertarik dengan layanan pembuatan website dari Qreative Tech. Bisa bantu jelaskan lebih lanjut?",
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-warning-100 text-warning-700 my-5 text-[15px] font-bold"
-            radius="full"
-            size="md"
-            startContent={<IconPhone size={15} />}
-          >
-            Hubungi tim kami
-          </Button>
-          <Image
-            src="/iconVideoCall.svg"
-            alt="iconVideoCall"
-            width={100}
-            height={100}
-          />
+        <div className="flex flex-col gap-[16px]">
+          <div className="flex flex-col gap-[2px]">
+            <h1 className="text-warning-900 text-[20px] font-bold">
+              Buat website sekarang
+            </h1>
+            <p className="text-warning-800 text-[14px] font-bold">
+              <span className="text-warning-900 text-[14px] font-bold italic">
+                Atau {""}
+              </span>
+              diskusikan kebutuhan anda
+            </p>
+          </div>
+          <div className="flex w-fit flex-row items-center">
+            <Button
+              as={Link}
+              href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
+                "Halo! Saya tertarik dengan layanan pembuatan website dari Qreative Tech. Bisa bantu jelaskan lebih lanjut?",
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-warning-100 text-warning-700 text-[12px] font-bold"
+              radius="full"
+              size="md"
+              startContent={<IconPhone size={12} />}
+            >
+              Hubungi tim kami
+            </Button>
+          </div>
+          <div className="absolute right-0 bottom-0">
+            <Image
+              src="/iconVideoCall.svg"
+              alt="iconVideoCall"
+              width={100}
+              height={100}
+            />
+          </div>
         </div>
       </div>
       {/* Desktop */}
