@@ -4,68 +4,63 @@ import { Button } from "@heroui/button";
 import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
 import { AboutSection } from "./_components/AboutSection";
-import CardProductDesktop from "./_components/CardProductDesktop";
-import CardProductMobile from "./_components/CardProductMobile";
 import { ContactDesktop } from "./_components/ContactDesktop";
 import { ContactMobile } from "./_components/ContactMobile";
 import { HeroSection } from "./_components/HeroSection";
+import { HeroSectionMobile } from "./_components/HeroSectionMobile";
 import { KeunggulanSection } from "./_components/KeunggulanSection";
+import { KeunggulanSectionMobile } from "./_components/KeunggulanSectionMobile";
+import { ProductSectionDesktop } from "./_components/ProductSectionDesktop";
+import { ProductSectionMobile } from "./_components/ProductSectionMobile";
 
 export default function Home() {
   return (
-    <section className="relative flex h-full flex-col items-center justify-center gap-0 overflow-hidden lg:pt-10">
+    <section className="relative flex h-full flex-col items-center justify-center gap-0 overflow-hidden">
       {/* Section Hero */}
-      <div id="home" className="relative w-full scroll-mt-[101px]">
+      <div
+        id="home"
+        className="relative block w-full scroll-mt-[101px] lg:hidden"
+      >
+        <HeroSectionMobile />
+      </div>
+      <div
+        id="home"
+        className="relative hidden w-full scroll-mt-[101px] lg:block"
+      >
         <HeroSection />
       </div>
-      <div className="absolute top-55 right-[-100px] z-0">
+      <div className="absolute [top:clamp(10px,8vw,55px)] [right:clamp(-250px,-8vw,-100px)] z-0">
         <Image
           alt="Glow Right"
           src="/Glow.svg"
           width={684}
           height={681}
-          className="object-contain"
+          className="[height:clamp(300px,40vw,681px)] [width:clamp(300px,40vw,684px)] object-contain"
         />
       </div>
+
       {/* Mobile Image absolute */}
-      <div className="absolute top-[256px] right-0 z-1 w-[80%] translate-x-1/2 lg:hidden">
+      <div className="absolute [top:clamp(256px,20vw,-100px)] [right:clamp(0px,-20vw,100px)] z-1 w-fit translate-x-1/2 lg:hidden">
         <Image
           alt="PC Image"
           src="/computer.png"
-          width={270}
-          height={283}
-          className="object-contain"
+          width={`[clamp(270px,25vw,370px)]`}
+          height={`[clamp(283px,26vw,383px)]`}
+          className="[height:clamp(283px,26vw,583px)] [width:clamp(270px,25vw,670px)]"
         />
       </div>
 
       {/* Section Keunggulan */}
-      <div className="relative w-full">
+      <div className="relative block w-full lg:hidden">
+        <KeunggulanSectionMobile />
+      </div>
+      <div className="relative hidden w-full lg:block">
         <KeunggulanSection />
       </div>
 
       {/* Section Product */}
-      <div
-        id="product"
-        className="relative flex h-auto w-full flex-col items-center justify-center gap-[42px] rounded-tl-[24px] rounded-br-[12px] pt-[72px] pb-[62px] text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]"
-      >
-        <div className="flex w-full flex-col items-center gap-[6px] px-[58px]">
-          <h1 className="[font-size:clamp(24px,6vw,44px)] font-semibold text-white md:text-5xl">
-            Produk Kami
-          </h1>
-          <p className="text-neutral-custom-500 text-center text-[14px] font-medium">
-            Tinjau sebagian dari proyek-proyek website terbaik qreative-tech
-          </p>
-        </div>
-        <div className="block md:hidden">
-          <CardProductMobile />
-        </div>
-        <div className="hidden md:block">
-          <CardProductDesktop />
-        </div>
-        <div className="absolute top-[500px] z-0">
-          <Image src="/Ellipse.svg" />
-        </div>
-      </div>
+      <ProductSectionMobile />
+      <ProductSectionDesktop />
 
       {/* Section Paket Layanan */}
       {/* <div className="bg-neutral-custom-800 relative mt-5 flex h-auto w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]">

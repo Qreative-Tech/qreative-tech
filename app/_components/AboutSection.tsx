@@ -57,9 +57,9 @@ export const AboutSection = () => {
             className="mt-3 flex cursor-pointer flex-row items-center gap-2"
             onClick={() => router.push("/about")}
           >
-            <p className="text-warning-300 text-[14px] font-bold">Read more</p>
+            <p className="text-warning-300 text-[18px] font-bold">Read more</p>
             <IconRightArrow
-              size={14}
+              size={18}
               className="text-warning-500"
               variant="Bold"
             />

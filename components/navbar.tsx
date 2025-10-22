@@ -110,7 +110,7 @@ export const Navbar = () => {
       {/* Mobile Menu */}
       <NavbarMenu className="bg-black-500">
         {menuItems.map((item, index) => {
-          console.log("item", item);
+          // console.log("item", item);
           return (
             <NavbarMenuItem key={`${item}-${index}`}>
               <Link
