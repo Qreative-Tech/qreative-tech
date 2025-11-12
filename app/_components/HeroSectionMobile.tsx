@@ -1,4 +1,5 @@
 import { IconRightArrow } from "@/components/icons/IconRightArrow";
+import { NOMORWA } from "@/utils/constans";
 import { Button } from "@heroui/button";
 import { Link } from "@heroui/link";
 
@@ -36,7 +37,7 @@ export const HeroSectionMobile = () => {
               <IconRightArrow size={18} className="text-accent-400 ms-2" />
             }
             as={Link}
-            href={`https://wa.me/6285231796284?text=${encodeURIComponent(
+            href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
               "Halo! Saya mau pesan jasa pembuatan website dari kamu. Bisa bantu prosesnya sekarang?",
             )}`}
             target="_blank"

@@ -1,6 +1,7 @@
 "use client";
 
 import { IconRightArrow } from "@/components/icons/IconRightArrow";
+import { NOMORWA } from "@/utils/constans";
 import { Button } from "@heroui/button";
 import { Card, CardBody, CardHeader } from "@heroui/card";
 import { Link } from "@heroui/link";
@@ -106,7 +107,7 @@ export default function CardPaketLayananMobile() {
             radius="full"
             className="border-accent-700 my-5 h-[40px] min-w-[150px] border px-[18px] py-[10px] text-sm text-[14px] font-bold"
             as={Link}
-            href={`https://wa.me/6285231796284?text=${encodeURIComponent(
+            href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
               `Halo! Saya tertarik dengan *${paketData[current].title}* yang ditawarkan di Qreative Tech. Bisa dibantu jelaskan detail dan proses pemesanannya?`,
             )}`}
             target="_blank"

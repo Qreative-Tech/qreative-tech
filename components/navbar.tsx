@@ -13,6 +13,7 @@ import {
   NavbarMenuToggle,
 } from "@heroui/navbar";
 
+import { NOMORWA } from "@/utils/constans";
 import { useState } from "react";
 import { IconClose } from "./icons/IconClose";
 import { IconMenu } from "./icons/IconMenu";
@@ -85,7 +86,7 @@ export const Navbar = () => {
         <NavbarItem>
           <Button
             as={Link}
-            href={`https://wa.me/6285231796284?text=${encodeURIComponent(
+            href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
               "Halo! Saya tertarik dengan jasa pembuatan website dari kamu. Bisa bantu jelaskan lebih lanjut?",
             )}`}
             target="_blank"
