@@ -40,9 +40,12 @@ export const HeroSection = () => {
           variant="solid"
           color="secondary"
           radius="full"
-          className="border-accent-700 flex h-[62px] w-max items-center justify-center border px-[26px] py-[18px] text-[20px] font-bold"
+          className="group border-accent-700 hover:text-neutral-custom-300 hover:bg-brand-400 flex h-[62px] w-max items-center justify-center border px-[26px] py-[18px] text-[20px] font-bold transition duration-300 ease-in-out hover:border-[#555454]"
           endContent={
-            <IconRightArrow size={30} className="text-accent-400 ms-2" />
+            <IconRightArrow
+              size={30}
+              className="text-accent-400 group-hover:text-warning-100 ms-2 transition duration-300 ease-in-out"
+            />
           }
           as={Link}
           href={`https://wa.me/6285231796284?text=${encodeURIComponent(

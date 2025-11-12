@@ -80,8 +80,9 @@ Terima kasih`;
               radius="sm"
               classNames={{
                 inputWrapper:
-                  "bg-white/5 border border-white/10 rounded-md h-[42px]",
-                input: "text-white placeholder:text-white/40",
+                  "bg-white/5 border border-white/10 rounded-md h-[42px] transition-colors data-[hover=true]:bg-neutral-custom-700 data-[focus=true]:bg-neutral-custom-700",
+                input:
+                  "!text-white placeholder:!text-white/40 transition-colors data-[focus=true]:!text-white",
               }}
             />
             {errors.nama && (
@@ -99,8 +100,9 @@ Terima kasih`;
               radius="sm"
               classNames={{
                 inputWrapper:
-                  "bg-white/5 border border-white/10 rounded-md h-[42px]",
-                input: "text-white placeholder:text-white/40",
+                  "bg-white/5 border border-white/10 rounded-md h-[42px] transition-colors data-[hover=true]:bg-neutral-custom-700 data-[focus=true]:bg-neutral-custom-700",
+                input:
+                  "!text-white placeholder:!text-white/40 transition-colors data-[focus=true]:!text-white",
               }}
             />
             {errors.email && (
@@ -118,8 +120,10 @@ Terima kasih`;
               variant="flat"
               radius="sm"
               classNames={{
-                inputWrapper: "bg-white/5 border border-white/10 rounded-md",
-                input: "text-white placeholder:text-white/40",
+                inputWrapper:
+                  "bg-white/5 border border-white/10 rounded-md  transition-colors data-[hover=true]:bg-neutral-custom-700 data-[focus=true]:bg-neutral-custom-700",
+                input:
+                  "!text-white placeholder:!text-white/40 transition-colors data-[focus=true]:!text-white",
               }}
             />
             {errors.pesan && (
@@ -129,7 +133,7 @@ Terima kasih`;
 
           <Button
             onPress={handleSendWhatsApp}
-            className="mt-2 rounded-full border border-white/10 bg-transparent text-white"
+            className="hover:bg-neutral-custom-700 hover:border-accent-500 mt-2 rounded-full border border-white/10 bg-transparent text-white transition duration-200 ease-in-out"
             variant="bordered"
           >
             Kirim pesan
@@ -173,7 +177,7 @@ Terima kasih`;
         <div className="flex flex-row items-center gap-3">
           <Button
             as={Link}
-            href={`https://wa.me/6285231796284?text=${encodeURIComponent(
+            href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
               "Halo! Saya tertarik dengan layanan pembuatan website dari Qreative Tech.",
             )}`}
             size="sm"
@@ -194,7 +198,7 @@ Terima kasih`;
             rel="noopener noreferrer"
             className="text-neutral-custom-400 hover:text-warning-400 text-[12px] font-medium transition-colors"
           >
-            (+62) 852-3179-6284
+            (+62) 823-4361-3521
           </Link>
         </div>
         <div className="flex flex-row items-center gap-3">

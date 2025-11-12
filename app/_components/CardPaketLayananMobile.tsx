@@ -8,23 +8,31 @@ import { useState } from "react";
 
 const paketData = [
   {
-    title: "Paket Website Business",
+    title: "Paket Starter",
     startPrice: "3.000.000",
-    desc: "Praktis dan ekonomis untuk merintis bisnis",
+    desc: "Untuk kamu yang baru mulai membangun kehadiran online bisnis",
     options: [
-      { name: "Starter", price: "IDR 3.000.000" },
-      { name: "Growth", price: "IDR 5.000.000" },
-      { name: "Pro", price: "IDR 10.000.000" },
+      {
+        name: "Desain website profesional (1–3 halaman)",
+        price: "IDR 3.000.000",
+      },
+      { name: "Mobile-friendly", price: "IDR 5.000.000" },
+      { name: "Integrasi WhatsApp & media sosial", price: "IDR 10.000.000" },
+      { name: "Hosting & domain 1 tahun", price: "IDR 10.000.000" },
+      { name: "Dukungan teknis dasar", price: "IDR 10.000.000" },
     ],
   },
   {
-    title: "Paket Website Premium",
+    title: "Paket Pro",
     startPrice: "7.000.000",
     desc: "Fitur lengkap dan tampilan profesional",
     options: [
-      { name: "Starter", price: "IDR 7.000.000" },
-      { name: "Growth", price: "IDR 12.000.000" },
-      { name: "Pro", price: "IDR 20.000.000" },
+      { name: "Desain custom & interaktif", price: "IDR 7.000.000" },
+      { name: "Hingga 10 halaman website", price: "IDR 12.000.000" },
+      { name: "Fitur blog & portofolio", price: "IDR 20.000.000" },
+      { name: "Integrasi SEO dasar", price: "IDR 20.000.000" },
+      { name: "Email bisnis profesional", price: "IDR 20.000.000" },
+      { name: "Maintenance & update bulanan", price: "IDR 20.000.000" },
     ],
   },
 ];
@@ -61,20 +69,20 @@ export default function CardPaketLayananMobile() {
       >
         {/* Header paket */}
         <CardHeader className="bg-accent-800 flex w-full flex-row items-center justify-center rounded-b-xl px-[30.53px] py-[17.45px]">
-          <h1 className="text-warning-400 text-center text-[18px] font-semibold">
+          <h1 className="text-warning-200 text-center text-[18px] font-[700]">
             {paketData[current].title}
           </h1>
         </CardHeader>
         <CardBody className="mt-3 flex flex-col items-center gap-4">
           {/* Harga utama */}
           <div className="text-center">
-            <p className="text-neutral-custom-600 text-sm font-bold">
+            {/* <p className="text-neutral-custom-600 text-sm font-bold">
               Start from
             </p>
             <h2 className="mt-2 text-3xl font-bold text-white">
               {paketData[current].startPrice}
-            </h2>
-            <div className="mt-4 rounded-lg bg-[#282829] px-[24px] py-[6px]">
+            </h2> */}
+            <div className="rounded-lg bg-[#282829] px-[24px] py-[6px]">
               <p className="text-neutral-custom-400 text-sm">
                 {paketData[current].desc}
               </p>
@@ -84,12 +92,9 @@ export default function CardPaketLayananMobile() {
           {/* Daftar pilihan paket */}
           <div className="border-neutral-custom-700 w-full space-y-2 rounded-lg border p-3 text-sm">
             {paketData[current].options.map((opt, i) => (
-              <div
-                key={i}
-                className="flex items-center justify-between px-3 py-2"
-              >
+              <div key={i} className="flex items-center gap-4 px-3 py-2">
+                <span>-</span>
                 <span>{opt.name}</span>
-                <span>{opt.price}</span>
               </div>
             ))}
           </div>

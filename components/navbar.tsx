@@ -93,7 +93,7 @@ export const Navbar = () => {
             variant="solid"
             color="primary"
             radius="full"
-            className="h-[39px] w-[157px] px-5 py-2 text-sm font-bold md:h-[47px] md:w-[217px] md:px-6 md:py-3 md:text-[18px]"
+            className="hover:bg-warning-300 hover:text-warning-900 h-[39px] w-[157px] px-5 py-2 text-sm font-bold md:h-[47px] md:w-[217px] md:px-6 md:py-3 md:text-[18px]"
           >
             Mau Ngobrol Dulu ?
           </Button>

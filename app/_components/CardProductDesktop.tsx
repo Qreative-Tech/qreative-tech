@@ -136,7 +136,8 @@ export default function CardProductDesktop({
                 }}
               >
                 <Card
-                  className={`w-[330px] max-w-[465px] gap-[41.79px] border border-white/10 bg-white/5 px-[25.07px] py-[22.66px] shadow-inner backdrop-blur-sm transition-all duration-300`}
+                  className={`group w-[330px] max-w-[465px] cursor-pointer gap-[41.79px] border border-white/10 bg-white/5 px-[25.07px] py-[22.66px] shadow-inner backdrop-blur-sm transition-all duration-300 ease-in-out hover:bg-white/15`}
+                  onPress={() => router.push(`/produk/${card.slug}`)}
                 >
                   <CardHeader className="flex-col items-start p-0">
                     <Image
@@ -156,16 +157,13 @@ export default function CardProductDesktop({
                         <p className="line-clamp-2 bg-gradient-to-b from-[#C2C2C2] to-[#696969] bg-clip-text text-[14px] font-normal text-transparent">
                           {card.desc}
                         </p>
-                        <div
-                          className="flex cursor-pointer flex-row items-center gap-[10px]"
-                          onClick={() => router.push(`/produk/${card.slug}`)}
-                        >
-                          <p className="text-warning-300 cursor-pointer text-[16px] font-bold">
+                        <div className="flex cursor-pointer flex-row items-center gap-[10px]">
+                          <p className="text-neutral-custom-600 group-hover:text-warning-300 cursor-pointer text-[16px] font-bold">
                             Read more
                           </p>
                           <IconRightArrow
                             size={17}
-                            className="text-warning-500"
+                            className="text-neutral-custom-600 group-hover:text-warning-300 cursor-pointer"
                             variant="Bold"
                           />
                         </div>

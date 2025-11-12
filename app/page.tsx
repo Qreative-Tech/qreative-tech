@@ -4,6 +4,8 @@ import { Button } from "@heroui/button";
 import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
 import { AboutSection } from "./_components/AboutSection";
+import CardPaketLayananDesktop from "./_components/CardPaketLayananDesktop";
+import CardPaketLayananMobile from "./_components/CardPaketLayananMobile";
 import { ContactDesktop } from "./_components/ContactDesktop";
 import { ContactMobile } from "./_components/ContactMobile";
 import { HeroSection } from "./_components/HeroSection";
@@ -63,28 +65,33 @@ export default function Home() {
       <ProductSectionDesktop />
 
       {/* Section Paket Layanan */}
-      {/* <div className="bg-neutral-custom-800 relative mt-5 flex h-auto w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:py-[96px]">
-        <div className="flex w-full flex-col items-center px-8 py-[38px]">
+      <div className="bg-neutral-custom-800 mt-5 flex h-auto w-full flex-col items-center justify-center rounded-tl-[24px] rounded-br-[12px] px-5 py-8 text-white md:rounded-tl-[100px] md:rounded-br-[72px] md:px-[96px] md:pt-[121px] md:pb-[230px]">
+        <div className="relative flex w-full flex-col items-center px-8 py-[38px]">
           <h1 className="block bg-gradient-to-r from-[#EEEEEE] to-[#545454] bg-clip-text [font-size:clamp(24px,6vw,44px)] font-bold text-transparent lg:hidden">
             Paket Layanan
           </h1>
           <h1 className="hidden [font-size:clamp(24px,6vw,44px)] font-bold text-white lg:block">
             Paket Layanan untuk Anda
           </h1>
-          <div className="z-10 block lg:hidden">
+          <div className="z-10 block md:hidden">
             <CardPaketLayananMobile />
           </div>
-          <div className="z-10 hidden w-full justify-center lg:flex">
+          <div className="z-10 hidden w-full justify-center md:flex">
             <CardPaketLayananDesktop />
           </div>
-          <div className="absolute top-0 z-[0] hidden md:block">
-            <Image src="/EllipseSecond.svg" />
+          {/* Untuk Desktop */}
+          <div className="absolute bottom-[-80px] left-[47%] z-[0] hidden w-full max-w-[782px] -translate-x-1/2 md:block lg:left-[48%]">
+            <Image src="/GlowPacketDesktop.svg" width={"100%"} />
           </div>
-          <div className="absolute bottom-[75px] z-[0] md:hidden">
-            <Image src="/EllipseSecond.svg" />
+          {/* Untuk Mobile */}
+          <div className="absolute bottom-[80px] z-[0] md:hidden">
+            <Image src="/EllipseMobile.svg" />
+          </div>
+          <div className="absolute bottom-[28px] z-[0] md:hidden">
+            <Image src="/GlowPacketMobile.svg" />
           </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Section Contact */}
       {/* Mobile  */}

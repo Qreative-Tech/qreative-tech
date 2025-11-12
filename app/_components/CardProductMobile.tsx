@@ -22,7 +22,10 @@ export default function CardProductMobile() {
   return (
     <div className="relative z-20 flex flex-col items-center px-[36px]">
       {/* Card */}
-      <Card className="w-[282px] border border-white/10 bg-white/5 py-1 shadow-inner backdrop-blur-sm transition-all duration-300">
+      <Card
+        className="w-[282px] cursor-pointer border border-white/10 bg-white/5 py-1 shadow-inner backdrop-blur-sm transition-all duration-300"
+        onPress={() => router.push(`/produk/${listProduk[current].slug}`)}
+      >
         <CardHeader className="flex items-center justify-center px-4 pt-2 pb-0">
           <Image
             alt="Card background"
@@ -38,10 +41,7 @@ export default function CardProductMobile() {
           <p className="mt-1 bg-gradient-to-b from-[#C2C2C2] to-[#696969] bg-clip-text text-[12px] text-transparent">
             {listProduk[current].desc}
           </p>
-          <div
-            className="mt-3 flex cursor-pointer flex-row items-center gap-2"
-            onClick={() => router.push(`/produk/${listProduk[current].slug}`)}
-          >
+          <div className="mt-3 flex cursor-pointer flex-row items-center gap-2">
             <p className="text-warning-300 text-[12px] font-bold">Read more</p>
             <IconRightArrow
               size={12}

@@ -1,4 +1,4 @@
-export const NOMORWA = "6285231796284";
+export const NOMORWA = "6282343613521";
 
 import DashboardEventImg from "@/assets/portofolio/dashboard-mockup.jpg";
 import essImg from "@/assets/portofolio/ess-mockup.jpg";
