@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.4] - 2025-11-12
+
+### Detail Versi 1.1.4
+
+#### 🛠️ Patch di `main` untuk versi 1.1.4
+
+- **Deskripsi:**
+  - Perbarui detail package (package.json) dan metadata paket untuk konsistensi rilis.
+  - Tingkatkan responsivitas di beberapa komponen (CardProductMobile, Navbar, Hero, ProdukDetailPage) dengan penyesuaian breakpoint dan styling.
+  - Sesuaikan z-index dan penataan layer pada container gambar untuk memperbaiki tata letak di mobile.
+  - Perbaikan CSS minor dan optimasi ukuran aset untuk pengalaman mobile yang lebih baik.
+
 ## [1.1.3] - 2025-10-15
 
 ### Detail Versi 1.1.3
