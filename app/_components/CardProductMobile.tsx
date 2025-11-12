@@ -24,7 +24,11 @@ export default function CardProductMobile() {
       {/* Card */}
       <Card
         className="w-[282px] cursor-pointer border border-white/10 bg-white/5 py-1 shadow-inner backdrop-blur-sm transition-all duration-300"
-        onPress={() => router.push(`/produk/${listProduk[current].slug}`)}
+        onPress={() => {
+          // console.log("clicked");
+          router.push(`/produk/${listProduk[current].slug}`);
+        }}
+        isPressable
       >
         <CardHeader className="flex items-center justify-center px-4 pt-2 pb-0">
           <Image
