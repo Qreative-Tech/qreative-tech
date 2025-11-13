@@ -138,6 +138,7 @@ export default function CardProductDesktop({
                 <Card
                   className={`group w-[330px] max-w-[465px] cursor-pointer gap-[41.79px] border border-white/10 bg-white/5 px-[25.07px] py-[22.66px] shadow-inner backdrop-blur-sm transition-all duration-300 ease-in-out hover:bg-white/15`}
                   onPress={() => router.push(`/produk/${card.slug}`)}
+                  isPressable
                 >
                   <CardHeader className="flex-col items-start p-0">
                     <Image
