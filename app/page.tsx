@@ -1,8 +1,12 @@
+"use client";
+
+import LottieAsset from "@/assets/lotties/Ai based chatbot discuss (4).json";
 import { IconPhone } from "@/components/icons/IconPhone";
 import { NOMORWA } from "@/utils/constans";
 import { Button } from "@heroui/button";
 import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
+import Lottie from "lottie-react";
 import { AboutSection } from "./_components/AboutSection";
 import CardPaketLayananDesktop from "./_components/CardPaketLayananDesktop";
 import CardPaketLayananMobile from "./_components/CardPaketLayananMobile";
@@ -42,13 +46,20 @@ export default function Home() {
       </div>
 
       {/* Mobile Image absolute */}
-      <div className="absolute [top:clamp(256px,20vw,-100px)] [right:clamp(0px,-20vw,100px)] z-1 w-fit translate-x-1/2 lg:hidden">
-        <Image
+      <div className="absolute [top:clamp(170px,20vw,-100px)] [right:clamp(0px,-20vw,100px)] z-1 w-fit translate-x-1/2 lg:hidden">
+        {/* <Image
           alt="PC Image"
           src="/computer.png"
           width={`[clamp(270px,25vw,370px)]`}
           height={`[clamp(283px,26vw,383px)]`}
           className="[height:clamp(283px,26vw,583px)] [width:clamp(270px,25vw,670px)]"
+        /> */}
+        <Lottie
+          animationData={LottieAsset}
+          loop={true}
+          width={445}
+          className="max-w-[500px]"
+          height={470}
         />
       </div>
 
@@ -112,7 +123,7 @@ export default function Home() {
             <Button
               as={Link}
               href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
-                "Halo! Saya tertarik dengan layanan pembuatan website dari Qreative Tech. Bisa bantu jelaskan lebih lanjut?",
+                "Halo! Saya tertarik dengan layanan pembuatan website dari Nadanta Dev. Bisa bantu jelaskan lebih lanjut?",
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -154,7 +165,7 @@ export default function Home() {
             size="lg"
             as={Link}
             href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
-              "Halo! Saya tertarik dengan layanan pembuatan website dari Qreative Tech. Bisa bantu jelaskan lebih lanjut?",
+              "Halo! Saya tertarik dengan layanan pembuatan website dari Nadanta. Bisa bantu jelaskan lebih lanjut?",
             )}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -168,7 +179,7 @@ export default function Home() {
             startContent={<IconPhone size={25} color="#BD7A00" />}
             as={Link}
             href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
-              "Halo! Saya ingin mendiskusikan kebutuhan website saya dengan tim Qreative Tech. Bisa bantu saya menentukan paket yang cocok?",
+              "Halo! Saya ingin mendiskusikan kebutuhan website saya dengan tim Nadanta. Bisa bantu saya menentukan paket yang cocok?",
             )}`}
             target="_blank"
             rel="noopener noreferrer"

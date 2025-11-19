@@ -3,7 +3,7 @@
 import { IconEmail } from "@/components/icons/IconEmail";
 import { IconPhone } from "@/components/icons/IconPhone";
 import { IconPoint } from "@/components/icons/IconPoint";
-import { NOMORWA } from "@/utils/constans";
+import { EMAIL, NOMORWA } from "@/utils/constans";
 import { Button } from "@heroui/button";
 import { Card } from "@heroui/card";
 import { Input, Textarea } from "@heroui/input";
@@ -50,7 +50,7 @@ export const ContactMobile = () => {
     if (!validate()) return;
 
     const nomor = NOMORWA;
-    const text = `Halo Qreative Tech!
+    const text = `Halo Nadanta!
 Saya ingin menghubungi melalui form di website.
 
 Nama: ${nama || "-"}
@@ -154,7 +154,7 @@ Terima kasih`;
         <div className="flex flex-row items-center gap-3">
           <Button
             as={Link}
-            href="mailto:qreativetech@gmail.com"
+            href={`"mailto:${EMAIL}"`}
             size="sm"
             isIconOnly
             radius="full"
@@ -166,19 +166,19 @@ Terima kasih`;
             <IconEmail size={12} className="text-warning-300" />
           </Button>
           <Link
-            href="mailto:qreativetech@gmail.com"
+            href={`"mailto:${EMAIL}"`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-custom-400 hover:text-warning-400 text-[12px] font-medium transition-colors"
           >
-            qreativetech@gmail.com
+            {EMAIL}
           </Link>
         </div>
         <div className="flex flex-row items-center gap-3">
           <Button
             as={Link}
             href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
-              "Halo! Saya tertarik dengan layanan pembuatan website dari Qreative Tech.",
+              "Halo! Saya tertarik dengan layanan pembuatan website dari Nadanta.",
             )}`}
             size="sm"
             isIconOnly
@@ -192,7 +192,7 @@ Terima kasih`;
           </Button>
           <Link
             href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
-              "Halo! Saya tertarik dengan layanan pembuatan website dari Qreative Tech.",
+              "Halo! Saya tertarik dengan layanan pembuatan website dari Nadanta.",
             )}`}
             target="_blank"
             rel="noopener noreferrer"

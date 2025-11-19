@@ -32,8 +32,8 @@ export const Navbar = () => {
       <NavbarContent>
         <NavbarBrand>
           <Image
-            alt="Qreative Tech Logo"
-            src="/qreativelogo.png"
+            alt="Nadanta Logo"
+            src="/nadantalogo.svg"
             className="h-[40.86px] w-[130.59px] md:h-auto md:w-[208px]"
           />
         </NavbarBrand>

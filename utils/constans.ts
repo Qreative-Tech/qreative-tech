@@ -1,4 +1,5 @@
 export const NOMORWA = "6282343613521";
+export const EMAIL = "nadanta.techdev@gmail.com";
 
 import DashboardEventImg from "@/assets/portofolio/dashboard-mockup.jpg";
 import essImg from "@/assets/portofolio/ess-mockup.jpg";

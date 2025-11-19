@@ -1,8 +1,11 @@
+"use client";
+
+import LottieAsset from "@/assets/lotties/Ai based chatbot discuss (4).json";
 import { IconRightArrow } from "@/components/icons/IconRightArrow";
 import { NOMORWA } from "@/utils/constans";
 import { Button } from "@heroui/button";
-import { Image } from "@heroui/image";
 import { Link } from "@heroui/link";
+import Lottie from "lottie-react";
 
 export const HeroSection = () => {
   return (
@@ -61,12 +64,18 @@ export const HeroSection = () => {
 
       {/* Right Section - Desktop */}
       <div className="relative hidden w-full items-center justify-center pe-10 lg:flex">
-        <Image
+        {/* <Image
           alt="PC Image"
           src="/computer.png"
           width={445}
           height={470}
           className="object-contain"
+        /> */}
+        <Lottie
+          animationData={LottieAsset}
+          loop={true}
+          width={445}
+          height={470}
         />
       </div>
     </div>

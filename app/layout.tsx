@@ -68,12 +68,12 @@ export default function RootLayout({
               </Link> */}
 
               <p className="text-neutral-custom-600 text-[11px] font-bold lg:text-[18px]">
-                Copyright © 2025 Qreative Tech
+                Copyright © 2025 Nadanta
               </p>
               <div className="hidden items-center md:flex">
                 <Image
-                  src="/qreativeLogoV2.svg"
-                  alt="Qreative Logo"
+                  src="/nadantalogofooter.svg"
+                  alt="Nadanta Logo"
                   width={214}
                   height={52}
                 />
@@ -81,7 +81,7 @@ export default function RootLayout({
               <div className="flex justify-end md:hidden">
                 <Image
                   src="/qreativeLogoHead.svg"
-                  alt="Qreative Logo"
+                  alt="Nadanta Logo"
                   width={28}
                   height={26}
                 />

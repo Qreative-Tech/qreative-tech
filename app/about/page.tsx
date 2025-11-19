@@ -14,7 +14,7 @@ export default function AboutPage() {
         <div className="mx-4 grid grid-cols-1 gap-8 py-6 text-black md:mx-[50px] md:grid-cols-3 md:py-[250px]">
           <div className="justify-center md:col-span-1">
             <h2 className="mb-3 md:text-xl md:font-semibold">
-              Selamat datang di Qreative Tech
+              Selamat datang di Nadanta
             </h2>
             <h1 className="mb-3 [font-size:clamp(28px,6vw,55px)] font-bold md:leading-[70px]">
               Jasa pembuatan website murah dan terpercaya
@@ -38,13 +38,13 @@ export default function AboutPage() {
             <h2 className="mb-3 leading-[30px] font-normal md:text-xl">
               Selain layanan web builder, layanan lain yaitu jasa design flyer,
               logo, id card dan lain-lain yang berkaitan dengan digital promote
-              atau branding. Jadi, Qreative Tech berfokus pada layanan{" "}
+              atau branding. Jadi, Nadanta berfokus pada layanan{" "}
               <span className="font-extrabold">digital kreatif</span> dan{" "}
               <span className="font-extrabold">tech service.</span>
             </h2>
             <h2 className="mb-3 leading-[30px] font-normal md:text-xl">
-              Qreative Tech dimulai pada tahun 2024, walaupun terbilang masih
-              dini, kami akan memberikan pelayanan semaksimal mungkin dengan
+              Nadanta dimulai pada tahun 2024, walaupun terbilang masih dini,
+              kami akan memberikan pelayanan semaksimal mungkin dengan
               <span className="font-extrabold"> evaluasi berkala</span> agar
               kami tetap terus berkembang.
             </h2>

@@ -12,7 +12,7 @@ export const ProductSectionMobile = () => {
           Produk Kami
         </h1>
         <p className="text-neutral-custom-500 text-center text-[14px] font-medium">
-          Tinjau sebagian dari proyek-proyek website terbaik qreative-tech
+          Tinjau sebagian dari proyek-proyek website terbaik nadanta
         </p>
       </div>
       <CardProductMobile />

@@ -91,10 +91,12 @@ export default function CardPaketLayananMobile() {
           </div>
 
           {/* Daftar pilihan paket */}
-          <div className="border-neutral-custom-700 w-full space-y-2 rounded-lg border p-3 text-sm">
+          <div className="border-neutral-custom-700 mt-3 w-full space-y-2 rounded-lg border text-sm">
             {paketData[current].options.map((opt, i) => (
-              <div key={i} className="flex items-center gap-4 px-3 py-2">
-                <span>-</span>
+              <div
+                key={i}
+                className={`${i % 2 !== 0 ? "bg-neutral-custom-800" : ""} flex items-center justify-center px-3 py-3 text-center`}
+              >
                 <span>{opt.name}</span>
               </div>
             ))}
@@ -108,7 +110,7 @@ export default function CardPaketLayananMobile() {
             className="border-accent-700 my-5 h-[40px] min-w-[150px] border px-[18px] py-[10px] text-sm text-[14px] font-bold"
             as={Link}
             href={`https://wa.me/${NOMORWA}?text=${encodeURIComponent(
-              `Halo! Saya tertarik dengan *${paketData[current].title}* yang ditawarkan di Qreative Tech. Bisa dibantu jelaskan detail dan proses pemesanannya?`,
+              `Halo! Saya tertarik dengan *${paketData[current].title}* yang ditawarkan di Nadanta. Bisa dibantu jelaskan detail dan proses pemesanannya?`,
             )}`}
             target="_blank"
             rel="noopener noreferrer"

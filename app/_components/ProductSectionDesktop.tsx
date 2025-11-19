@@ -17,7 +17,7 @@ export const ProductSectionDesktop = () => {
         <div className="flex w-full flex-col items-center gap-[16px]">
           <h1 className="text-[44px] font-bold text-white">Produk Kami</h1>
           <p className="text-accent-300 text-center text-[24px] font-normal">
-            Tinjau sebagian dari proyek-proyek website terbaik qreative-tech
+            Tinjau sebagian dari proyek-proyek website terbaik nadanta
           </p>
         </div>
         <CardProductDesktop
