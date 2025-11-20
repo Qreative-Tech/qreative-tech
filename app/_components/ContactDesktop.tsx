@@ -204,7 +204,7 @@ export const ContactDesktop = () => {
         <div className="flex flex-row items-center gap-3">
           <Button
             as={Link}
-            href="https://www.google.com/maps?q=Banyuwangi,+Jawa+Timur,+Indonesia+68482"
+            href="https://maps.app.goo.gl/t3ZidY4guzkMg8uK7"
             target="_blank"
             rel="noopener noreferrer"
             size="lg"
@@ -216,12 +216,12 @@ export const ContactDesktop = () => {
             <IconPoint size={18} className="text-warning-300" />
           </Button>
           <Link
-            href="https://www.google.com/maps?q=Banyuwangi,+Jawa+Timur,+Indonesia+68482"
+            href="https://maps.app.goo.gl/t3ZidY4guzkMg8uK7"
             target="_blank"
             rel="noopener noreferrer"
             className="text-neutral-custom-400 hover:text-warning-400 text-[18px] font-medium transition-colors"
           >
-            Jawa Timur, Indonesia — Banyuwangi, 68482
+            Jawa Timur, Indonesia — Jember, 68123
           </Link>
         </div>
       </div>
