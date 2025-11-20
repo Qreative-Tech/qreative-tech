@@ -40,6 +40,7 @@ const paketData = [
 
 export default function CardPaketLayananMobile() {
   const [current, setCurrent] = useState(0);
+  const [active, setActive] = useState(false);
 
   const prev = () => {
     setCurrent((prev) => (prev === 0 ? paketData.length - 1 : prev - 1));
@@ -66,24 +67,39 @@ export default function CardPaketLayananMobile() {
       {/* Card */}
       <Card
         radius="none"
-        className="border-accent-700 relative w-full max-w-[300px] rounded-b-2xl border bg-gradient-to-b from-[#282828] to-[#1C1C1C]"
+        isPressable
+        onPress={() => {
+          // console.log("clicked");
+          setActive((s) => !s);
+        }}
+        className={`group relative w-full max-w-[300px] rounded-b-2xl border-3 border-t-0 transition duration-300 ease-in-out ${
+          active
+            ? "border-neutral-custom-600 bg-gradient-to-b from-[#303030] to-[#1C1C1C]"
+            : "border-accent-700 bg-gradient-to-b from-[#282828] to-[#1C1C1C]"
+        }`}
       >
         {/* Header paket */}
-        <CardHeader className="bg-accent-800 flex w-full flex-row items-center justify-center rounded-b-xl px-[30.53px] py-[17.45px]">
-          <h1 className="text-warning-200 text-center text-[18px] font-[700]">
+        <CardHeader
+          className={`flex w-full flex-row items-center justify-center rounded-b-xl px-[30.53px] py-[17.45px] transition duration-300 ease-in-out ${
+            active ? "bg-warning-300" : "bg-accent-800"
+          }`}
+        >
+          <h1
+            className={`text-center text-[18px] font-[700] ${
+              active ? "text-accent-800" : "text-warning-400"
+            }`}
+          >
             {paketData[current].title}
           </h1>
         </CardHeader>
         <CardBody className="mt-3 flex flex-col items-center gap-4">
           {/* Harga utama */}
           <div className="text-center">
-            {/* <p className="text-neutral-custom-600 text-sm font-bold">
-              Start from
-            </p>
-            <h2 className="mt-2 text-3xl font-bold text-white">
-              {paketData[current].startPrice}
-            </h2> */}
-            <div className="rounded-lg bg-[#282829] px-[24px] py-[6px]">
+            <div
+              className={`rounded-lg px-[24px] py-[6px] transition duration-300 ease-in-out ${
+                active ? "bg-neutral-custom-700" : "bg-[#282829]"
+              }`}
+            >
               <p className="text-neutral-custom-400 text-sm">
                 {paketData[current].desc}
               </p>
