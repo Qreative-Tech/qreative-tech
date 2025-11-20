@@ -72,7 +72,7 @@ export default function RootLayout({
               </p>
               <div className="hidden items-center md:flex">
                 <Image
-                  src="/nadantalogofooter.svg"
+                  src="/nadantalogofooter.png"
                   alt="Nadanta Logo"
                   width={214}
                   height={52}

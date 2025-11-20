@@ -63,19 +63,11 @@ export const HeroSection = () => {
       </div>
 
       {/* Right Section - Desktop */}
-      <div className="relative hidden w-full items-center justify-center pe-10 lg:flex">
-        {/* <Image
-          alt="PC Image"
-          src="/computer.png"
-          width={445}
-          height={470}
-          className="object-contain"
-        /> */}
+      <div className="relative hidden h-full w-full items-center justify-center lg:flex">
         <Lottie
           animationData={LottieAsset}
           loop={true}
-          width={445}
-          height={470}
+          className="h-full w-full"
         />
       </div>
     </div>

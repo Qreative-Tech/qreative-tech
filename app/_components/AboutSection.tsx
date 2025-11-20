@@ -16,17 +16,17 @@ export const AboutSection = () => {
         <LottieCompo
           animationData={LottieAsset}
           style={{
-            width: "252px",
-            height: "165px",
+            width: "336px",
+            height: "220px",
           }}
           loop={true}
         />
         {/* </div> */}
         <div className="mt-5 flex flex-col items-start justify-center px-[50px]">
-          <h1 className="text-neutral-custom-200 text-start text-[24px] font-bold">
+          <h1 className="text-neutral-custom-200 text-start text-[28px] font-bold">
             Tentang Kami
           </h1>
-          <p className="mt-4 bg-gradient-to-b from-[#C2C2C2] to-[#696969] bg-clip-text text-[12px] font-normal text-transparent">
+          <p className="mt-4 bg-gradient-to-b from-[#C2C2C2] to-[#696969] bg-clip-text text-[14px] font-normal text-transparent">
             Nadanta merupakan sebuah digital agency spesialis yang menyediakan
             layananan pembuatan website kebutuhan industri, perusahaan maupun
             personal. Nadanta dimulai pada tahun 2024, walaupun terbilang masih
