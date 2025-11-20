@@ -31,6 +31,15 @@ export const viewport: Viewport = {
   ],
 };
 
+export async function generateStaticParams() {
+  return [
+    { slug: "indekeen" },
+    { slug: "dashboard-event" },
+    { slug: "books-app" },
+    { slug: "ess-telkom" },
+  ];
+}
+
 export default function RootLayout({
   children,
 }: {
