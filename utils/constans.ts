@@ -51,7 +51,7 @@ import ESS6 from "@/assets/portofolio/ess-telkom/tabs.png";
 
 export const listProduk = [
   {
-    demoLink: "https://www.youtube.com/embed/VRH4sqtHz1o?si=vNJeNp8mNu-cW6oS",
+    demoLink: "https://www.youtube.com/embed/w_BMwP8OjVQ?si=pRdKGVLIGmMpNY8K",
     slug: "indekeen",
     title: "Indekeen",
     link: "https://homepage-idekeen.vercel.app",
@@ -85,7 +85,7 @@ export const listProduk = [
     ],
   },
   {
-    demoLink: "https://www.youtube.com/embed/FVeofSqu1kI?si=uLUDBoYWvO531uSs",
+    demoLink: "https://www.youtube.com/embed/_f0EfFdRCao?si=UZWli0jzboA_CT8y",
     slug: "dashboard-event",
     title: "Dashboard Event",
     link: "#",
@@ -114,7 +114,7 @@ export const listProduk = [
     ],
   },
   {
-    demoLink: "https://www.youtube.com/embed/gZEn__P5hog?si=Er1u1LiCJdzwcwto",
+    demoLink: "https://www.youtube.com/embed/cD74lftVANo?si=sc5_fbbLsIZXLG7w",
     slug: "quizz-app",
     title: "Quizz App",
     link: "https://quiziz-six.vercel.app",
@@ -130,7 +130,7 @@ export const listProduk = [
     images: [Quiz1.src, Quiz2.src, Quiz3.src, Quiz4.src],
   },
   {
-    demoLink: "https://www.youtube.com/embed/uAnzqVQZZug?si=zgPC7dxVA463o-1O",
+    demoLink: "https://www.youtube.com/embed/cWQdhMsmZAI?si=QZylZthzlg6pJgS4",
     slug: "books-app",
     title: "Books App",
     link: "http://book.labrisetess.com",
@@ -153,7 +153,7 @@ export const listProduk = [
     images: [Books1.src, Books2.src, Books3.src, Books4.src, Books5.src],
   },
   {
-    demoLink: "https://www.youtube.com/embed/qcn4aL2scMY?si=1zbgrFdFdus_s-Zl",
+    demoLink: "https://www.youtube.com/embed/ayqpAt9wcrk?si=JPptI8spoMrNMBNt",
     slug: "ess-telkom",
     title: "ESS Telkom",
     link: "https://labrisetess.com",
