@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2025-11-20
+
+### Detail Versi 1.3.0
+
+#### ✨ Fitur baru di `main` untuk versi 1.3.0
+
+- **Deskripsi:**
+  - Tambahkan file `.htaccess` untuk penanganan permintaan ke file HTML statis (letakkan di /public agar terikut pada build), termasuk fallback dan header yang diperlukan untuk hosting statis berbasis Apache.
+  - Perbarui `src/app/layout.tsx` dengan penambahan `staticParams` agar route yang diketahui dapat diprerender secara statis dan meningkatkan performa/SEO.
+  - Konfigurasi `next.config.js` untuk mendukung penanganan file HTML statis dan pengaturan build/export yang relevan (mis. rewrites/redirects, output/static export flags).
+  - File terpengaruh: `.htaccess`, `src/app/layout.tsx`, `next.config.js`.
+  - Catatan deploy: rebuild project dan pastikan `.htaccess` tersertakan pada direktori publik saat deploy ke hosting yang memakai Apache atau yang membaca file .htaccess.
+
 ## [1.2.5] - 2025-11-20
 
 ### Detail Versi 1.2.5
