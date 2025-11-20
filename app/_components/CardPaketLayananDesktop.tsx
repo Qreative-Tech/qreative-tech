@@ -74,7 +74,7 @@ export default function CardPaketLayananDesktop() {
               >
                 {paket.startPrice}
               </h2> */}
-              <div className="mt-4 rounded-lg bg-[#282829] px-[24px] py-[6px]">
+              <div className="group-hover:bg-neutral-custom-700 mt-4 rounded-lg bg-[#282829] px-[24px] py-[6px] transition duration-300 ease-in-out">
                 <p className={`text-neutral-custom-400 text-sm`}>
                   {paket.desc}
                 </p>
